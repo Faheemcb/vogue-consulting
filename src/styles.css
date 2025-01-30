@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+body {
+  @apply bg-black text-white;
+}
+
+.banner {
+  @apply flex justify-center items-center text-center mt-[50px]; /* Adjusted spacing */
+}
+
+.text-center-wrapper {
+  @apply relative flex justify-center items-center h-[300px] w-full mt-[50px]; /* Added spacing above */
+}
+
+.Ellipse-3 {
+  @apply absolute top-[100%] right-0 transform -translate-y-1/2 w-[300px] h-[400px] max-w-full opacity-67 bg-gradient-to-r to-[#570471] via-[#570471] blur-[43.4px];
+}

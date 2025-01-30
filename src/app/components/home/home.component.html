@@ -1,0 +1,474 @@
+<app-offer></app-offer>
+<section>
+  <div class="relative w-full">
+    <!-- Gradient Background -->
+    <div class="absolute w-full hidden sm:block md:h-[590px] top-0 bg-gradient-to-r via-[#570471] to-[#00058d] rounded-b-[230px] z-0">
+    </div>
+    
+    <!-- Mobile Gradient Background -->
+    <div class="absolute w-full sm:hidden h-[400px] top-0 bg-gradient-to-r via-[#570471] to-[#00058d] rounded-b-[50px] z-0">
+    </div>
+
+    <!-- Main Content -->
+    <div class="relative z-10">
+      <!-- Navigation -->
+      <div class="flex flex-col md:flex-row items-center px-4 md:px-6 py-4 md:ml-20">
+        <img src="assets/img/image-1.png" alt="Logo" 
+             class="w-[120px] md:w-[182px] h-auto md:h-[126px] mb-4 md:mb-0 md:mr-5">
+        <div class="flex flex-col md:flex-row gap-6 md:gap-20 text-white text-base md:text-xl font-sans cursor-pointer">
+          <span class="hover:text-[#b424ff]" routerLink="services">Our Services</span>
+          <span class="hover:text-[#b424ff]" routerLink="about-us">About Us</span>
+          <span class="hover:text-[#b424ff]" routerLink="contact-us">Contact Us</span>
+        </div>
+      </div>
+
+      <!-- Image Group - Hidden on mobile -->
+      <div class="relative hidden md:block">
+        <img src="assets/img/image-2.png" alt="" 
+             class="absolute top-[10px] right-[225px] w-[325px] h-[425px] z-20">
+        <div class="absolute top-[80px] right-[270px] w-[288px] h-[288px] rounded-full blur-lg bg-gradient-to-r from-yellow-500 via-purple-600 to-blue-500 border border-gray-400">
+        </div>
+        <img src="assets/img/image-3.png" alt="" 
+             class="absolute top-[-65px] right-[23px] w-[724px] h-[392px] z-30">
+        <img src="assets/img/ellipse-2.png" alt="" 
+             class="absolute top-[-400px] right-[83px] w-[600px] h-[600px] rounded-full opacity-40 border-4 border-purple-700 z-10">
+        <img src="assets/img/group-5.png" alt="" 
+             class="absolute top-[-254px] right-[140px] w-[235px] h-[349px]">
+      </div>
+
+      <!-- Heading and Button Section -->
+      <div class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6 px-4 md:px-0 mt-8 md:mt-0 cursor-pointer">
+        <div class="w-full md:w-[50px] h-[80px] md:h-[210px] p-5 rounded-[30px] bg-gradient-to-b from-purple-600 to-blue-600 flex justify-center items-center">
+          <span class="text-white text-[20px] md:text-[25px] leading-none md:[writing-mode:vertical-rl] md:rotate-180 whitespace-nowrap">
+            Get in Touch
+          </span>
+        </div>
+
+        <div class="text-white text-center md:text-left md:ml-20">
+          <h1 class="text-2xl md:text-4xl font-sans leading-[1.18]">
+            Data-Driven Marketing Solutions for <br>
+            <span class="text-purple-400">Revenue Growth</span>
+          </h1>
+        </div>
+      </div>
+
+      <!-- Call to Action Button -->
+      <div 
+      class="mt-4 md:mt-[-30px] mx-4 md:ml-[150px] md:w-[380px] h-[60px] px-4 md:px-6 py-3 md:py-4 border-4 border-white rounded-full flex items-center justify-between md:space-x-2 cursor-pointer transition-all duration-300 ease-in-out 
+             bg-transparent hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 hover:border-transparent hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50"
+      (click)="openContactForm()"
+    >
+      <a href="#free-audit-form" class="text-white text-base md:text-[20px] transition-colors duration-300 hover:text-gray-100">
+        Get Your Free Audit Now
+      </a>
+      <i class="fa-solid fa-arrow-right text-white text-[18px] md:text-[22px] transition-transform duration-300 group-hover:translate-x-2"></i>
+    </div>
+    </div>
+  </div>
+</section>
+  <section>
+   
+    <div class="w-full text-center mt-20 sm:mt-40 md:mt-60 px-4">
+      <!-- Gradient Background with Text -->
+      <div class="relative p-6 max-w-[1200px] mx-auto">
+          <div 
+              class="absolute inset-0 blur-[50px] bg-gradient-to-r" 
+              style="background: linear-gradient(116deg, #fff 0%, #000 0%, #570471 73%, #00058d 107%);">
+          </div>
+          <!-- Text Content -->
+          <span class="relative text-base sm:text-lg md:text-xl font-sans text-white z-10 leading-relaxed">
+              <span class="text-purple-400 font-bold">10 YEARS</span> of industry experience | 
+              <span class="text-purple-400 font-bold">200+</span> national & international clients | 
+              <span class="text-purple-400 font-bold">HIGHER ROAS</span> with unique strategies
+          </span>
+      </div>
+  
+      <!-- Main Banner -->
+      <div class="mt-8 px-4">
+          <p class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-tight text-center mx-auto p-4 sm:p-5">
+              We don't just create marketing campaigns—we <br class="hidden sm:block">
+              engineer success stories.
+          </p>
+      </div>
+  
+      <!-- Description Text -->
+      <div class="text-center max-w-[1000px] mx-auto px-4 mt-6 sm:mt-10">
+          <span class="text-white text-lg sm:text-xl md:text-2xl font-light leading-relaxed block">
+              As 
+              <span class="font-normal text-[#d562cc]">a data-driven, result-oriented marketing agency based in the UK,</span>
+              we deliver measurable outcomes, enabling businesses to scale and thrive. 
+              Our focus lies in crafting custom strategies backed by analytics, ensuring every marketing decision is 
+              calculated for maximum impact.
+          </span>
+      </div>
+  
+      <!-- Background Blur Effect -->
+       <!-- <div class="Ellipse-3"></div> -->
+      <div class="absolute right-[5%] top-[140%] w-[200px] sm:w-[300px] h-[200px] sm:h-[250px] bg-gradient-to-br from-[#570471] to-[#570471] opacity-40 blur-[40px]"></div>
+  </div>
+<div class="relative p-6 sm:p-12 flex justify-center items-center">
+  <div class="flex flex-col lg:flex-row justify-start items-center lg:items-start gap-8 lg:gap-10 w-full max-w-[1200px]">
+      <!-- Image -->
+      <img src="assets/img/cyberpunk-illustration-with-neon-colors-futuristic-technology-1.png" 
+          srcset="img/cyberpunk-illustration-with-neon-colors-futuristic-technology-1@2x.png 2x,
+                  img/cyberpunk-illustration-with-neon-colors-futuristic-technology-1@3x.png 3x"
+          alt="Cyberpunk Illustration"
+          class="relative w-full max-w-[300px] sm:max-w-[350px] md:max-w-[400px] h-auto object-contain rounded-[30px] sm:rounded-[40px] lg:rounded-[57px] z-10 lg:ml-[50px] xl:ml-[50px]">
+      
+      <!-- Text Content -->
+      <div class="flex flex-col justify-start items-start max-w-full lg:max-w-[700px] z-10 text-center lg:text-left">
+          <span class="text-[#e5d3ff] text-2xl sm:text-3xl md:text-4xl font-light leading-[1.2] mb-4 sm:mb-6">
+              Customer-Centric Marketing <br class="hidden sm:block"> that Delivers Results
+          </span>
+          <span class="text-white text-base sm:text-lg md:text-xl font-light leading-[1.5]">
+              We don’t believe in one-size-fits-all solutions. Every business is unique, and so are its marketing needs. 
+              At Marketing Hub, we take a customer-centric approach, focusing on your business’s specific goals and 
+              challenges. Whether you’re a B2B, B2C, or SaaS business, we develop personalized strategies using competitor 
+              analysis, deep market study, and data-driven insights to achieve high-stream revenue.
+          </span>
+      </div>
+  </div>
+
+  <!-- Background Blur -->
+  <div class="absolute top-[50%] left-[20px] sm:left-10 transform -translate-x-1/2 -translate-y-1/2 w-[200px] sm:w-[300px] h-[250px] sm:h-[350px] bg-gradient-to-br from-[#570471] to-[#570471] opacity-40 blur-[30px] sm:blur-[43px] z-0"></div>
+</div>
+<div class="flex flex-col items-center mt-8 px-4 sm:px-8">
+  <p class="text-2xl sm:text-3xl md:text-4xl font-light text-[#e5d3ff] mt-10 sm:mt-16 text-center">
+      Our Core Services
+  </p>
+  <span class="text-lg sm:text-xl font-light text-white text-center max-w-[90%] sm:max-w-[80%]">
+      As a full-service digital marketing agency, we specialize in:
+  </span>
+
+  <div class="relative flex justify-center items-center mt-12 cursor-pointer w-full">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-8 justify-center items-center relative z-10">
+          <!-- Card 1 -->
+          <div class="flex flex-col justify-between items-start w-full sm:w-[400px] lg:w-[500px] h-[260px] p-5 bg-[#121212] rounded-lg overflow-hidden relative transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-r from-[#590474] to-[#30057e]">
+              <div class="flex items-center gap-3 mb-3 w-full">
+                  <img src="assets/img/group-17.png" alt="Social Media Icon" class="w-10 sm:w-12 h-10 sm:h-12">
+                  <span class="text-white font-semibold text-xl sm:text-2xl">Social Media <br> Marketing</span>
+              </div>
+              <p class="text-white text-sm sm:text-base font-light leading-relaxed">
+                  Build strong connections with your audience and convert leads into loyal customers with targeted social media campaigns.
+              </p>
+          </div>
+          <!-- Card 2 -->
+          <div class="flex flex-col justify-between items-start w-full sm:w-[400px] lg:w-[500px] h-[260px] p-5 bg-[#121212] rounded-lg overflow-hidden relative transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-r from-[#590474] to-[#30057e]">
+              <div class="flex items-center gap-3 mb-3 w-full">
+                  <img src="assets/img/group-19.png" alt="Google Ads Icon" class="w-10 sm:w-12 h-10 sm:h-12">
+                  <span class="text-white font-semibold text-xl sm:text-2xl">Google Ads <br> (PPC)</span>
+              </div>
+              <p class="text-white text-sm sm:text-base font-light leading-relaxed">
+                  Drive immediate traffic and conversions with precision-targeted Google Ads campaigns.
+              </p>
+          </div>
+          <!-- Card 3 -->
+          <div class="flex flex-col justify-between items-start w-full sm:w-[400px] lg:w-[500px] h-[260px] p-5 bg-[#121212] rounded-lg overflow-hidden relative transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-r from-[#590474] to-[#30057e]">
+              <div class="flex items-center gap-3 mb-3 w-full">
+                  <img src="assets/img/group-21.png" alt="Content Writing Icon" class="w-10 sm:w-12 h-10 sm:h-12">
+                  <span class="text-white font-semibold text-xl sm:text-2xl">Content <br> Writing</span>
+              </div>
+              <p class="text-white text-sm sm:text-base font-light leading-relaxed">
+                  Deliver impactful, high-quality content that boosts engagement and drives conversions.
+              </p>
+          </div>
+          <!-- Card 4 -->
+          <div class="flex flex-col justify-between items-start w-full sm:w-[400px] lg:w-[500px] h-[260px] p-5 bg-[#121212] rounded-lg overflow-hidden relative transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-r from-[#590474] to-[#30057e]">
+              <div class="flex items-center gap-3 mb-3 w-full">
+                  <img src="assets/img/group-23.png" alt="Web Design Icon" class="w-10 sm:w-12 h-10 sm:h-12">
+                  <span class="text-white font-semibold text-xl sm:text-2xl">Web Design & <br> Development</span>
+              </div>
+              <p class="text-white text-sm sm:text-base font-light leading-relaxed">
+                  Our focus is on simplicity and accessibility, providing every business with high-quality, cost-effective web design.
+              </p>
+          </div>
+      </div>
+
+      <!-- Background Ellipse -->
+      <div class="absolute top-[50%] sm:right-[-30px] transform translate-y-[-50%] w-[200px] sm:w-[300px] h-[300px] sm:h-[400px] z-1 opacity-40 filter blur-[30px] bg-gradient-to-br from-[#570471] via-[#570471] pointer-events-none"></div>
+    </div>
+</div>
+</section>
+<section class="px-5 sm:px-10">
+  <div class="max-w-xl w-full mx-auto my-12 flex justify-center items-center p-4 sm:p-6 rounded-full border-2 border-white">
+    <span class="text-lg sm:text-xl md:text-2xl text-center text-white">
+      Get a Unique Strategy for Your Business
+    </span>
+  </div>
+
+  <div class="flex flex-col justify-center items-center text-center mb-10">
+    <span class="text-3xl sm:text-4xl md:text-5xl font-light text-[#e5d3ff] mb-5">
+      Our Promise to You: Success Guarantee
+    </span>
+    <span class="text-lg sm:text-xl text-white">
+      As a full-service digital marketing agency, we specialize in:
+    </span>
+  </div>
+
+  <div class="relative p-5 rounded-3xl max-w-screen-lg mx-auto mb-12">
+    <div class="flex flex-col md:flex-row gap-5 items-start mb-16 bg-gradient-to-tl from-[#10002e] to-transparent p-6 rounded-lg">
+      <div class="flex flex-col gap-5">
+        <div class="flex items-center gap-4">
+          <img src="assets/img/group-31.png" class="w-16 sm:w-20 h-20 sm:h-24 object-contain" alt="Group Icon">
+          <span class="text-2xl sm:text-3xl font-bold text-white">Growth Guarantee</span>
+        </div>
+        <span class="text-base sm:text-lg text-white font-light leading-7">
+          Vogue Consulting UK promises to achieve specified growth objectives within 
+          six months of engagement. If the objectives are not met, they will continue to 
+          provide their services at no extra cost until these goals are achieved.
+        </span>
+      </div>
+      <img src="assets/img/photo-business-finance-employment-female.png"
+        class="w-full md:w-[40%] max-h-80 object-contain opacity-70" 
+        alt="Business Woman">
+    </div>
+
+    <div class="flex flex-col md:flex-row gap-5 justify-center mb-16">
+      <div class="w-full max-w-xl bg-gradient-to-tl from-[#10002e] to-transparent p-6 md:p-10 rounded-2xl flex flex-col justify-between shadow-lg">
+        <div class="flex items-center gap-4">
+          <img src="assets/img/group-33.png" class="w-12 sm:w-16 h-12 sm:h-16 object-contain" alt="Refund Guarantee Icon">
+          <span class="text-xl sm:text-2xl font-bold text-white">Refund Guarantee</span>
+        </div>
+        <span class="text-base sm:text-lg text-white opacity-80">
+          If results are not delivered within three months, 
+          Vogue Consulting UK offers a full refund of the 
+          management fee.
+        </span>
+      </div>
+
+      <div class="w-full max-w-xl bg-gradient-to-tl from-[#10002e] to-transparent p-6 md:p-10 rounded-2xl flex flex-col justify-between shadow-lg">
+        <div class="flex items-center gap-4">
+          <img src="assets/img/group-35.png" class="w-12 sm:w-16 h-12 sm:h-16 object-contain" alt="High Quality Guarantee Icon">
+          <span class="text-xl sm:text-2xl font-bold text-white">High Quality of Work</span>
+        </div>
+        <span class="text-base sm:text-lg text-white opacity-80">
+          Vogue Consulting UK is committed to delivering 
+          work of the highest quality that surpasses 
+          client expectations.
+        </span>
+      </div>
+    </div>
+
+    <div class="w-72 sm:w-96 h-16 mx-auto p-4 bg-transparent border-2 border-white rounded-full flex justify-center items-center">
+      <span class="text-lg sm:text-xl text-white">Get Your Free Audit Now</span>
+    </div>
+  </div>
+</section>
+<div class="flex flex-col justify-center items-center py-16">
+  <div class="text-center">
+    <h2 class="text-4xl md:text-6xl font-light text-purple-200 mb-4">
+      What Sets Us Apart?
+    </h2>
+    <p class="text-lg md:text-2xl font-light text-white max-w-3xl mx-auto">
+      We are the best data-driven marketing agency in the UK, committed to empowering businesses with
+      intelligent marketing strategies that foster sustained growth. Our approach is anchored in:
+    </p>
+  </div>
+</div>
+
+<div class="flex flex-wrap items-center justify-center gap-16 px-6 md:px-10 py-16">
+  <!-- Reusable Section -->
+  <div class="space-y-16 w-full max-w-6xl">
+    <!-- Section 1 -->
+    <div class="flex flex-col md:flex-row items-center gap-10 md:gap-20">
+      <div class="relative w-full max-w-[400px]">
+        <div class="absolute -bottom-4 -right-4 bg-gradient-to-r from-purple-900 to-purple-700 opacity-30 rounded-lg w-full h-64"></div>
+        <img src="assets/img/mask-group-1.png" alt="Main Image" class="w-full h-64 object-cover relative z-10 rounded-lg">
+      </div>
+      <div class="flex flex-col justify-center max-w-lg text-center md:text-left space-y-4">
+        <img src="assets/img/group-11.png" alt="Group 11" class="w-16 h-16 mx-auto md:mx-0">
+        <h3 class="text-2xl md:text-3xl font-bold text-white">
+          Data-Driven Insights
+        </h3>
+        <p class="text-lg text-white">
+          Using sophisticated analytics to understand your market dynamics, audience behaviors, and key performance indicators (KPIs).
+        </p>
+        <div class="flex items-center justify-center md:justify-start gap-2">
+          <img src="assets/img/path-15.png" alt="Path 15" class="w-6">
+          <a href="#" class="text-lg text-white">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
+      <div class="relative w-full max-w-[400px]">
+        <div class="absolute -bottom-4 -left-4 bg-gradient-to-r from-purple-900 to-purple-700 opacity-30 rounded-lg w-full h-64"></div>
+        <img src="assets/img/mask-group-2.png" alt="Main Image" class="w-full h-64 object-cover relative z-10 rounded-lg">
+      </div>
+      <div class="flex flex-col justify-center max-w-lg text-center md:text-left space-y-4">
+        <img src="assets/img/group-13.png" alt="Group 13" class="w-16 h-16 mx-auto md:mx-0">
+        <h3 class="text-2xl md:text-3xl font-bold text-white">
+          Results-Oriented Performance
+        </h3>
+        <p class="text-lg text-white">
+          We prioritize high ROI, ensuring every marketing action is aligned with your business objectives, leading to measurable results.
+        </p>
+        <div class="flex items-center justify-center md:justify-start gap-2">
+          <img src="assets/img/path-15.png" alt="Path 15" class="w-6">
+          <a href="#" class="text-lg text-white">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="flex flex-col md:flex-row items-center gap-10 md:gap-20">
+      <div class="relative w-full max-w-[400px]">
+        <div class="absolute -bottom-4 -right-4 bg-gradient-to-r from-purple-900 to-purple-700 opacity-30 rounded-lg w-full h-64"></div>
+        <img src="assets/img/mask-group-3.png" alt="Main Image" class="w-full h-64 object-cover relative z-10 rounded-lg">
+      </div>
+      <div class="flex flex-col justify-center max-w-lg text-center md:text-left space-y-4">
+        <img src="assets/img/group-9.png" alt="Group 9" class="w-16 h-16 mx-auto md:mx-0">
+        <h3 class="text-2xl md:text-3xl font-bold text-white">
+          Customer-Centric Strategies
+        </h3>
+        <p class="text-lg text-white">
+          Every campaign is designed to resonate with your audience, addressing their needs and delivering personalized experiences.
+        </p>
+        <div class="flex items-center justify-center md:justify-start gap-2">
+          <img src="assets/img/path-15.png" alt="Path 15" class="w-6">
+          <a href="#" class="text-lg text-white">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
+      <div class="relative w-full max-w-[400px]">
+        <div class="absolute -bottom-4 -left-4 bg-gradient-to-r from-purple-900 to-purple-700 opacity-30 rounded-lg w-full h-64"></div>
+        <img src="assets/img/mask-group-4.png" alt="Main Image" class="w-full h-64 object-cover relative z-10 rounded-lg">
+      </div>
+      <div class="flex flex-col justify-center max-w-lg text-center md:text-left space-y-4">
+        <img src="assets/img/group-15.png" alt="Group 15" class="w-16 h-16 mx-auto md:mx-0">
+        <h3 class="text-2xl md:text-3xl font-bold text-white">
+          Expertise Across Channels
+        </h3>
+        <p class="text-lg text-white">
+          From SEO to Google Ads, Social Media Marketing to Content Creation, we provide end-to-end solutions that fuel business growth.
+        </p>
+        <div class="flex items-center justify-center md:justify-start gap-2">
+          <img src="assets/img/path-15.png" alt="Path 15" class="w-6">
+          <a href="#" class="text-lg text-white">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="max-w-7xl mx-auto my-20 px-6 py-16 rounded-[50px] lg:rounded-[197px] bg-gradient-to-t from-black/40 via-[#570471]/40 to-[#570471]/40">
+  <div class="flex flex-wrap items-center">
+    <div class="w-full lg:w-auto flex justify-center lg:justify-start">
+      <img 
+        src="assets/img/cyberpunk-illustration-with-neon-colors-futuristic-technology.png" 
+        srcset="img/cyberpunk-illustration-with-neon-colors-futuristic-technology@2x.png 2x, img/cyberpunk-illustration-with-neon-colors-futuristic-technology@3x.png 3x"
+        alt="Cyberpunk illustration"
+        class="w-[300px] md:w-[400px] lg:w-[474px] h-auto object-cover rounded-[50px] lg:rounded-[100px] transform translate-z-0 will-change-transform"
+      />
+    </div>
+    <div class="w-full lg:flex-1 flex flex-col justify-center mt-8 lg:mt-0 lg:ml-12 text-center lg:text-left">
+      <h1 class="font-light text-[28px] md:text-[36px] lg:text-[40px] leading-[1.2] text-[#e5d3ff]">
+        Strategic Planning for<br class="hidden md:block">
+        Long-Term Growth
+      </h1>
+      <p class="font-light text-[16px] md:text-[18px] lg:text-[20px] leading-[1.33] text-white mt-4 max-w-2xl mx-auto lg:mx-0">
+        At Vogue Consulting Marketing Hub, we don't just focus on immediate wins. We combine data analytics and market insights to design strategies that foster sustainable growth. By understanding your business's long-term goals, we create a roadmap that positions you for ongoing success.
+      </p>
+    </div>
+  </div>
+</div>
+<section class="px-4">
+  <div class="ml-12">
+    <h2 class="text-2xl text-[40px] text-purple-300 mb-4">
+      Ready to Scale Your Business?
+    </h2>
+    <p class="text-base lg:text-lg text-gray-200 mb-8">
+      If you’re looking to partner with a marketing agency that prioritizes your
+      business’s growth through data-driven insights and a
+      <br class="hidden md:block">
+      performance-optimized approach, get in touch with us today.
+    </p>
+  </div>
+
+  <div class="p-6 lg:p-10 rounded-lg shadow-lg text-white">
+    <form (ngSubmit)="onSubmit()" id="#free-audit-form">
+      <!-- Service Dropdown -->
+      <div class="form-group mb-6">
+        <label for="service" class="block text-2xl font-light mb-2">How can We Help?</label>
+        <div class="service-dropdown relative bg-purple-900 rounded-lg" 
+             style="width: 100%; max-width: 400px;">
+          <select
+            id="service"
+            name="service"
+            class="w-full h-[50px] bg-transparent border-none text-white text-lg px-4 outline-none appearance-none"
+            [(ngModel)]="selectedService"
+            (change)="addService()">
+            <option class="text-gray-500" value="" disabled selected>Select Service</option>
+            <option class="text-gray-500" value="Social Media Marketing">Social Media Marketing</option>
+            <option class="text-gray-500" value="Google Ads">Google Ads</option>
+            <option class="text-gray-500" value="Content Writing">Content Writing</option>
+            <option class="text-gray-500" value="Web Design & Development">Web Design & Development</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Selected Services -->
+      <div class="selected-services flex flex-wrap gap-3">
+        <span
+          *ngFor="let service of selectedServices"
+          class="bg-purple-900 text-white text-sm px-3 py-1 rounded-full shadow-md flex items-center gap-2">
+          {{ service }}
+          <button
+            type="button"
+            class="text-red-400 font-bold"
+            (click)="removeService(service)">
+            ✕
+          </button>
+        </span>
+      </div>
+
+      <!-- Name and Email -->
+      <div class="form-group flex flex-col lg:flex-row gap-5 mb-6">
+        <div class="input-wrapper flex-1">
+          <label for="name" class="block text-lg lg:text-2xl font-light mb-2">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            [(ngModel)]="formData.name"
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 text-black focus:ring-2 focus:ring-purple-500 bg-white">
+        </div>
+        <div class="input-wrapper flex-1">
+          <label for="email" class="block text-lg lg:text-2xl font-light mb-2">Enter Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            [(ngModel)]="formData.email"
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 text-black focus:ring-2 focus:ring-purple-500 bg-white">
+        </div>
+      </div>
+
+      <!-- Message -->
+      <div class="form-group mb-6">
+        <label for="message" class="block text-lg lg:text-2xl font-light mb-2">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="What else can you share about the project"
+          [(ngModel)]="formData.message"
+          class="w-full h-40 border border-gray-300 rounded-lg px-4 py-2 text-black focus:ring-2 focus:ring-purple-500 resize-y bg-white"></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="submit-btn flex justify-center lg:justify-end">
+        <button
+          type="submit"
+          class="w-full lg:w-[300px] h-12 lg:h-14 bg-transparent border border-white rounded-full text-white text-lg lg:text-xl font-medium hover:bg-purple-700 hover:text-black transition">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+<app-footer></app-footer>
