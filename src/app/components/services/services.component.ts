@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ContactFormService } from '../../shared/services/contact-form.service';
 
 @Component({
   selector: 'app-services',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './services.component.css'
 })
 export class ServicesComponent {
+
+  constructor(private contactFormService: ContactFormService){}
+
+  openContactForm(){
+    this.contactFormService.open();
+  }
 
 }

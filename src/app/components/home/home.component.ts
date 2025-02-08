@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AppwriteService } from '../../shared/services/appwrite.service';
 import { ContactFormService } from '../../shared/services/contact-form.service';
 
 @Component({
@@ -10,6 +9,16 @@ import { ContactFormService } from '../../shared/services/contact-form.service';
 export class HomeComponent {
   selectedService: string = '';
   selectedServices: string[] = [];
+  isMobileMenuOpen = false;
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
+
+  closeMenu() {
+    this.isMobileMenuOpen = false;
+  }
+
   formData = {
     name: '',
     email: '',
@@ -17,7 +26,7 @@ export class HomeComponent {
     message: ''
   };
 
-  constructor(private appwriteService: AppwriteService, private contactFormService: ContactFormService) {}
+  constructor( private contactFormService: ContactFormService) {}
 
   // Add a service to the list
   addService() {
@@ -36,13 +45,13 @@ export class HomeComponent {
 
   // Submit the form
   onSubmit() {
-    this.appwriteService.saveFormData(this.formData)
-      .then(() => {
-        this.resetForm();
-      })
-      .catch((error) => {
-        console.error('Error submitting form: ', error);
-      });
+    // this.appwriteService.saveFormData(this.formData)
+    //   .then(() => {
+    //     this.resetForm();
+    //   })
+    //   .catch((error) => {
+    //     console.error('Error submitting form: ', error);
+    //   });
   }
 
   // Reset the form

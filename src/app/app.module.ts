@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { AdminViewComponent } from './components/admin-view/admin-view.component';
 import { ContactFormComponent } from './shared/components/contact-form-component/contact-form-component.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +34,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     RouterModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     FormsModule
   ],
   providers: [],

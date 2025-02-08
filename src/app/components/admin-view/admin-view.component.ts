@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AppwriteService } from '../../shared/services/appwrite.service';
+// import { AppwriteService } from '../../shared/services/appwrite.service';
 
 @Component({
   selector: 'app-admin-view',
@@ -17,16 +17,16 @@ import { AppwriteService } from '../../shared/services/appwrite.service';
 export class AdminViewComponent {
   submissions: any[] = [];
 
-  constructor(private appwriteService: AppwriteService) {}
+  constructor() {}
 
   ngOnInit() {
-    this.appwriteService.getFormSubmissions()
-      .then((response: any) => {
-        this.submissions = response.documents;
-      })
-      .catch((error) => {
-        console.error('Error fetching submissions: ', error);
-      });
+    // this.appwriteService.getFormSubmissions()
+    //   .then((response: any) => {
+    //     this.submissions = response.documents;
+    //   })
+    //   .catch((error) => {
+    //     console.error('Error fetching submissions: ', error);
+    //   });
   }
 
 }

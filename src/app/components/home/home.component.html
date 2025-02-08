@@ -1,50 +1,68 @@
 <app-offer></app-offer>
 <section>
   <div class="relative w-full">
-    <!-- Gradient Background -->
-    <div class="absolute w-full hidden sm:block md:h-[590px] top-0 bg-gradient-to-r via-[#570471] to-[#00058d] rounded-b-[230px] z-0">
-    </div>
-    
-    <!-- Mobile Gradient Background -->
-    <div class="absolute w-full sm:hidden h-[400px] top-0 bg-gradient-to-r via-[#570471] to-[#00058d] rounded-b-[50px] z-0">
-    </div>
+    <!-- Gradient Backgrounds (unchanged) -->
+    <div class="absolute w-full hidden sm:block md:h-[590px] top-0 bg-gradient-to-r via-[#570471] to-[#00058d] rounded-b-[230px] z-0"></div>
+    <div class="absolute w-full sm:hidden h-[400px] top-0 bg-gradient-to-r via-[#570471] to-[#00058d] rounded-b-[50px] z-0"></div>
 
     <!-- Main Content -->
-    <div class="relative z-10">
-      <!-- Navigation -->
+    <div class="relative z-10"> 
+      <!-- Navigation (unchanged) -->
       <div class="flex flex-col md:flex-row items-center px-4 md:px-6 py-4 md:ml-20">
-        <img src="assets/img/image-1.png" alt="Logo" 
-             class="w-[120px] md:w-[182px] h-auto md:h-[126px] mb-4 md:mb-0 md:mr-5">
-        <div class="flex flex-col md:flex-row gap-6 md:gap-20 text-white text-base md:text-xl font-sans cursor-pointer">
+        <img src="assets/img/image-1.png" alt="Logo" class="w-[120px] md:w-[182px] h-auto md:h-[126px] mb-4 md:mb-0 md:mr-5">
+        
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex flex-col md:flex-row gap-6 md:gap-20 text-white text-base md:text-xl font-sans cursor-pointer">
           <span class="hover:text-[#b424ff]" routerLink="services">Our Services</span>
           <span class="hover:text-[#b424ff]" routerLink="about-us">About Us</span>
           <span class="hover:text-[#b424ff]" routerLink="contact-us">Contact Us</span>
         </div>
-      </div>
 
-      <!-- Image Group - Hidden on mobile -->
-      <div class="relative hidden md:block">
-        <img src="assets/img/image-2.png" alt="" 
-             class="absolute top-[10px] right-[225px] w-[325px] h-[425px] z-20">
-        <div class="absolute top-[80px] right-[270px] w-[288px] h-[288px] rounded-full blur-lg bg-gradient-to-r from-yellow-500 via-purple-600 to-blue-500 border border-gray-400">
+        <!-- Mobile Hamburger Menu (unchanged) -->
+        <div class="md:hidden self-end absolute top-4 right-4">
+          <button class="text-white focus:outline-none" (click)="toggleMobileMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path *ngIf="!isMobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              <path *ngIf="isMobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
-        <img src="assets/img/image-3.png" alt="" 
-             class="absolute top-[-65px] right-[23px] w-[724px] h-[392px] z-30">
-        <img src="assets/img/ellipse-2.png" alt="" 
-             class="absolute top-[-400px] right-[83px] w-[600px] h-[600px] rounded-full opacity-40 border-4 border-purple-700 z-10">
-        <img src="assets/img/group-5.png" alt="" 
-             class="absolute top-[-254px] right-[140px] w-[235px] h-[349px]">
+
+        <!-- Mobile Menu Dropdown (unchanged) -->
+        <div *ngIf="isMobileMenuOpen" class="md:hidden fixed inset-0 bg-black/50 z-40" (click)="toggleMobileMenu()">
+          <div class="absolute top-[120px] left-0 w-full bg-gradient-to-r from-[#570471] to-[#00058d] shadow-lg transform transition-transform duration-300 ease-in-out" (click)="$event.stopPropagation()">
+            <div class="flex flex-col items-center space-y-6 py-8 text-white text-xl">
+              <span class="hover:text-[#b424ff] cursor-pointer" routerLink="services" (click)="toggleMobileMenu()">Our Services</span>
+              <span class="hover:text-[#b424ff] cursor-pointer" routerLink="about-us" (click)="toggleMobileMenu()">About Us</span>
+              <span class="hover:text-[#b424ff] cursor-pointer" routerLink="contact-us" (click)="toggleMobileMenu()">Contact Us</span>
+              <div class="w-[250px] h-[60px] rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white flex items-center justify-center cursor-pointer hover:brightness-110 transition-all duration-300" (click)="openContactForm(); toggleMobileMenu()">
+                Get Your Free Audit
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Heading and Button Section -->
-      <div class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6 px-4 md:px-0 mt-8 md:mt-0 cursor-pointer">
-        <div class="w-full md:w-[50px] h-[80px] md:h-[210px] p-5 rounded-[30px] bg-gradient-to-b from-purple-600 to-blue-600 flex justify-center items-center">
-          <span class="text-white text-[20px] md:text-[25px] leading-none md:[writing-mode:vertical-rl] md:rotate-180 whitespace-nowrap">
+      <!-- Desktop Images Section (unchanged) -->
+      <div class="relative hidden md:block">
+        <img src="assets/img/image-2.png" alt="" class="absolute top-[10px] right-[225px] w-[325px] h-[425px] z-20">
+        <div class="absolute top-[80px] right-[270px] w-[288px] h-[288px] rounded-full blur-lg bg-gradient-to-r from-yellow-500 via-purple-600 to-blue-500 border border-gray-400"></div>
+        <img src="assets/img/image-3.png" alt="" class="absolute top-[-65px] right-[23px] w-[724px] h-[392px] z-30">
+        <img src="assets/img/ellipse-2.png" alt="" class="absolute top-[-400px] right-[83px] w-[600px] h-[600px] rounded-full opacity-40 border-4 border-purple-700 z-10">
+        <img src="assets/img/group-5.png" alt="" class="absolute top-[-254px] right-[140px] w-[235px] h-[349px]">
+      </div>
+
+      <!-- Updated Get in Touch Section -->
+      <div class="flex flex-col md:flex-row items-center md:space-y-0 md:space-x-6 px-4 md:px-0 mt-8 md:mt-0">
+        <!-- Get in Touch Button - Hidden on mobile -->
+        <div class="hidden md:block w-[50px] h-[210px] p-5 rounded-[30px] bg-gradient-to-b from-purple-600 to-blue-600 justify-center items-center cursor-pointer">
+          <span id="contact_form" class="text-white text-[25px] leading-none [writing-mode:vertical-rl] rotate-180 whitespace-nowrap">
             Get in Touch
           </span>
         </div>
-
-        <div class="text-white text-center md:text-left md:ml-20">
+        
+        <!-- Content - Adjusted for mobile -->
+        <div class="text-white text-center md:text-left" [ngClass]="{'md:ml-20': true, 'ml-0': true}">
           <h1 class="text-2xl md:text-4xl font-sans leading-[1.18]">
             Data-Driven Marketing Solutions for <br>
             <span class="text-purple-400">Revenue Growth</span>
@@ -52,17 +70,13 @@
         </div>
       </div>
 
-      <!-- Call to Action Button -->
-      <div 
-      class="mt-4 md:mt-[-30px] mx-4 md:ml-[150px] md:w-[380px] h-[60px] px-4 md:px-6 py-3 md:py-4 border-4 border-white rounded-full flex items-center justify-between md:space-x-2 cursor-pointer transition-all duration-300 ease-in-out 
-             bg-transparent hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 hover:border-transparent hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50"
-      (click)="openContactForm()"
-    >
-      <a href="#free-audit-form" class="text-white text-base md:text-[20px] transition-colors duration-300 hover:text-gray-100">
-        Get Your Free Audit Now
-      </a>
-      <i class="fa-solid fa-arrow-right text-white text-[18px] md:text-[22px] transition-transform duration-300 group-hover:translate-x-2"></i>
-    </div>
+      <!-- Free Audit Button -->
+      <div class="mt-4 md:mt-[-30px] mx-4 md:ml-[150px] md:w-[380px] h-[60px] px-4 md:px-6 py-3 md:py-4 border-4 border-white rounded-full flex items-center justify-between md:space-x-2 cursor-pointer transition-all duration-300 ease-in-out bg-transparent hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 hover:border-transparent hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50" (click)="openContactForm()">
+        <a class="text-white text-base md:text-[20px] transition-colors duration-300 hover:text-gray-100">
+          Get Your Free Audit Now
+        </a>
+        <i class="fa-solid fa-arrow-right text-white text-[18px] md:text-[22px] transition-transform duration-300 group-hover:translate-x-2"></i>
+      </div>
     </div>
   </div>
 </section>
@@ -110,8 +124,6 @@
   <div class="flex flex-col lg:flex-row justify-start items-center lg:items-start gap-8 lg:gap-10 w-full max-w-[1200px]">
       <!-- Image -->
       <img src="assets/img/cyberpunk-illustration-with-neon-colors-futuristic-technology-1.png" 
-          srcset="img/cyberpunk-illustration-with-neon-colors-futuristic-technology-1@2x.png 2x,
-                  img/cyberpunk-illustration-with-neon-colors-futuristic-technology-1@3x.png 3x"
           alt="Cyberpunk Illustration"
           class="relative w-full max-w-[300px] sm:max-w-[350px] md:max-w-[400px] h-auto object-contain rounded-[30px] sm:rounded-[40px] lg:rounded-[57px] z-10 lg:ml-[50px] xl:ml-[50px]">
       
@@ -266,89 +278,89 @@
   </div>
 </div>
 
-<div class="flex flex-wrap items-center justify-center gap-16 px-6 md:px-10 py-16">
+<div class="flex flex-wrap items-center justify-center gap-24 px-6 md:px-10 py-24">
   <!-- Reusable Section -->
-  <div class="space-y-16 w-full max-w-6xl">
+  <div class="space-y-32 w-full max-w-6xl">
     <!-- Section 1 -->
-    <div class="flex flex-col md:flex-row items-center gap-10 md:gap-20">
+    <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24 p-6">
       <div class="relative w-full max-w-[400px]">
-        <div class="absolute -bottom-4 -right-4 bg-gradient-to-r from-purple-900 to-purple-700 opacity-30 rounded-lg w-full h-64"></div>
+        <div class="absolute -bottom-6 -right-6 bg-gradient-to-r from-purple-900 to-purple-700 opacity-30 rounded-lg w-full h-64"></div>
         <img src="assets/img/mask-group-1.png" alt="Main Image" class="w-full h-64 object-cover relative z-10 rounded-lg">
       </div>
-      <div class="flex flex-col justify-center max-w-lg text-center md:text-left space-y-4">
-        <img src="assets/img/group-11.png" alt="Group 11" class="w-16 h-16 mx-auto md:mx-0">
+      <div class="flex flex-col justify-center max-w-lg text-center md:text-left space-y-6">
+        <img src="assets/img/group-11.png" alt="Group 11" class="w-20 h-20 mx-auto md:mx-0">
         <h3 class="text-2xl md:text-3xl font-bold text-white">
           Data-Driven Insights
         </h3>
         <p class="text-lg text-white">
           Using sophisticated analytics to understand your market dynamics, audience behaviors, and key performance indicators (KPIs).
         </p>
-        <div class="flex items-center justify-center md:justify-start gap-2">
+        <div class="flex items-center justify-center md:justify-start gap-3 pt-2">
           <img src="assets/img/path-15.png" alt="Path 15" class="w-6">
-          <a href="#" class="text-lg text-white">Learn More</a>
+          <a href="#" class="text-lg text-white hover:text-purple-300 transition-colors">Learn More</a>
         </div>
       </div>
     </div>
 
     <!-- Section 2 -->
-    <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
+    <div class="flex flex-col md:flex-row-reverse items-center gap-12 md:gap-24 p-6">
       <div class="relative w-full max-w-[400px]">
-        <div class="absolute -bottom-4 -left-4 bg-gradient-to-r from-purple-900 to-purple-700 opacity-30 rounded-lg w-full h-64"></div>
+        <div class="absolute -bottom-6 -left-6 bg-gradient-to-r from-purple-900 to-purple-700 opacity-30 rounded-lg w-full h-64"></div>
         <img src="assets/img/mask-group-2.png" alt="Main Image" class="w-full h-64 object-cover relative z-10 rounded-lg">
       </div>
-      <div class="flex flex-col justify-center max-w-lg text-center md:text-left space-y-4">
-        <img src="assets/img/group-13.png" alt="Group 13" class="w-16 h-16 mx-auto md:mx-0">
+      <div class="flex flex-col justify-center max-w-lg text-center md:text-left space-y-6">
+        <img src="assets/img/group-13.png" alt="Group 13" class="w-20 h-20 mx-auto md:mx-0">
         <h3 class="text-2xl md:text-3xl font-bold text-white">
           Results-Oriented Performance
         </h3>
         <p class="text-lg text-white">
           We prioritize high ROI, ensuring every marketing action is aligned with your business objectives, leading to measurable results.
         </p>
-        <div class="flex items-center justify-center md:justify-start gap-2">
+        <div class="flex items-center justify-center md:justify-start gap-3 pt-2">
           <img src="assets/img/path-15.png" alt="Path 15" class="w-6">
-          <a href="#" class="text-lg text-white">Learn More</a>
+          <a href="#" class="text-lg text-white hover:text-purple-300 transition-colors">Learn More</a>
         </div>
       </div>
     </div>
 
     <!-- Section 3 -->
-    <div class="flex flex-col md:flex-row items-center gap-10 md:gap-20">
+    <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24 p-6">
       <div class="relative w-full max-w-[400px]">
-        <div class="absolute -bottom-4 -right-4 bg-gradient-to-r from-purple-900 to-purple-700 opacity-30 rounded-lg w-full h-64"></div>
+        <div class="absolute -bottom-6 -right-6 bg-gradient-to-r from-purple-900 to-purple-700 opacity-30 rounded-lg w-full h-64"></div>
         <img src="assets/img/mask-group-3.png" alt="Main Image" class="w-full h-64 object-cover relative z-10 rounded-lg">
       </div>
-      <div class="flex flex-col justify-center max-w-lg text-center md:text-left space-y-4">
-        <img src="assets/img/group-9.png" alt="Group 9" class="w-16 h-16 mx-auto md:mx-0">
+      <div class="flex flex-col justify-center max-w-lg text-center md:text-left space-y-6">
+        <img src="assets/img/group-9.png" alt="Group 9" class="w-20 h-20 mx-auto md:mx-0">
         <h3 class="text-2xl md:text-3xl font-bold text-white">
           Customer-Centric Strategies
         </h3>
         <p class="text-lg text-white">
           Every campaign is designed to resonate with your audience, addressing their needs and delivering personalized experiences.
         </p>
-        <div class="flex items-center justify-center md:justify-start gap-2">
+        <div class="flex items-center justify-center md:justify-start gap-3 pt-2">
           <img src="assets/img/path-15.png" alt="Path 15" class="w-6">
-          <a href="#" class="text-lg text-white">Learn More</a>
+          <a href="#" class="text-lg text-white hover:text-purple-300 transition-colors">Learn More</a>
         </div>
       </div>
     </div>
 
     <!-- Section 4 -->
-    <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
+    <div class="flex flex-col md:flex-row-reverse items-center gap-12 md:gap-24 p-6">
       <div class="relative w-full max-w-[400px]">
-        <div class="absolute -bottom-4 -left-4 bg-gradient-to-r from-purple-900 to-purple-700 opacity-30 rounded-lg w-full h-64"></div>
+        <div class="absolute -bottom-6 -left-6 bg-gradient-to-r from-purple-900 to-purple-700 opacity-30 rounded-lg w-full h-64"></div>
         <img src="assets/img/mask-group-4.png" alt="Main Image" class="w-full h-64 object-cover relative z-10 rounded-lg">
       </div>
-      <div class="flex flex-col justify-center max-w-lg text-center md:text-left space-y-4">
-        <img src="assets/img/group-15.png" alt="Group 15" class="w-16 h-16 mx-auto md:mx-0">
+      <div class="flex flex-col justify-center max-w-lg text-center md:text-left space-y-6">
+        <img src="assets/img/group-15.png" alt="Group 15" class="w-20 h-20 mx-auto md:mx-0">
         <h3 class="text-2xl md:text-3xl font-bold text-white">
           Expertise Across Channels
         </h3>
         <p class="text-lg text-white">
           From SEO to Google Ads, Social Media Marketing to Content Creation, we provide end-to-end solutions that fuel business growth.
         </p>
-        <div class="flex items-center justify-center md:justify-start gap-2">
+        <div class="flex items-center justify-center md:justify-start gap-3 pt-2">
           <img src="assets/img/path-15.png" alt="Path 15" class="w-6">
-          <a href="#" class="text-lg text-white">Learn More</a>
+          <a href="#" class="text-lg text-white hover:text-purple-300 transition-colors">Learn More</a>
         </div>
       </div>
     </div>
@@ -359,7 +371,6 @@
     <div class="w-full lg:w-auto flex justify-center lg:justify-start">
       <img 
         src="assets/img/cyberpunk-illustration-with-neon-colors-futuristic-technology.png" 
-        srcset="img/cyberpunk-illustration-with-neon-colors-futuristic-technology@2x.png 2x, img/cyberpunk-illustration-with-neon-colors-futuristic-technology@3x.png 3x"
         alt="Cyberpunk illustration"
         class="w-[300px] md:w-[400px] lg:w-[474px] h-auto object-cover rounded-[50px] lg:rounded-[100px] transform translate-z-0 will-change-transform"
       />
@@ -389,7 +400,7 @@
   </div>
 
   <div class="p-6 lg:p-10 rounded-lg shadow-lg text-white">
-    <form (ngSubmit)="onSubmit()" id="#free-audit-form">
+    <form (ngSubmit)="onSubmit()" #contact_form>
       <!-- Service Dropdown -->
       <div class="form-group mb-6">
         <label for="service" class="block text-2xl font-light mb-2">How can We Help?</label>
@@ -407,6 +418,12 @@
             <option class="text-gray-500" value="Content Writing">Content Writing</option>
             <option class="text-gray-500" value="Web Design & Development">Web Design & Development</option>
           </select>
+          <!-- Chevron Icon -->
+          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4">
+            <svg class="h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </div>
         </div>
       </div>
 

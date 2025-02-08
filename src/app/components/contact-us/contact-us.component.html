@@ -2,10 +2,10 @@
 <app-navbar></app-navbar>
 <main>
   <section class="mt-11 px-4">
-    <h1 class="text-center text-2xl md:text-4xl" style="color: #e5d3ff;">
+    <h1 class="text-center text-2xl md:text-4xl font-light" style="color: #e5d3ff;">
       Let’s Grow Your Business Together
     </h1>
-    <p class="text-center mt-4 text-base md:text-2xl">
+    <p class="text-center mt-4 text-base md:text-2xl font-light">
       Whether you’re interested in SEO, social media marketing, or a full-scale marketing strategy,
       <br class="hidden md:block">
       Vogue Consulting Marketing Hub is here to help. We’re ready to listen, analyze, and design a
@@ -59,8 +59,8 @@
 
         <!-- Right Section -->
         <div class="flex flex-col space-y-4 pl-8 w-full lg:w-1/2 text-center lg:text-left">
-          <p class="text-lg lg:text-2xl font-bold">Connect with us</p>
-          <p>
+          <p class="text-lg lg:text-2xl font-semibold">Connect with us</p>
+          <p class="font-light">
             Follow us on social media to stay updated with our
             <br class="hidden md:block" />
             latest projects, tips, and insights.
@@ -93,13 +93,14 @@
         <!-- Service Dropdown -->
         <div class="form-group mb-6">
           <label for="service" class="block text-2xl font-light mb-2">How can We Help?</label>
-          <div class="service-dropdown relative bg-purple-900 rounded-lg" 
-               style="width: 100%; max-width: 400px;">
+          <div class="service-dropdown relative bg-purple-900 rounded-lg" style="width: 100%; max-width: 400px;">
             <select
               id="service"
               name="service"
-              class="w-full h-[50px] bg-transparent border-none text-white text-lg px-4 outline-none appearance-none"
+              class="w-full h-[50px] bg-transparent border-none text-white text-lg px-4 pr-10 outline-none appearance-none"
               [(ngModel)]="selectedService"
+              (focus)="isDropdownOpen = true"
+              (blur)="isDropdownOpen = false"
               (change)="addService()">
               <option class="text-gray-500" value="" disabled selected>Select Service</option>
               <option class="text-gray-500" value="Social Media Marketing">Social Media Marketing</option>
@@ -107,6 +108,11 @@
               <option class="text-gray-500" value="Content Writing">Content Writing</option>
               <option class="text-gray-500" value="Web Design & Development">Web Design & Development</option>
             </select>
+          
+            <!-- Chevron Icon -->
+            <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 transform -translate-y-1/2 transition-transform duration-300"
+               [ngClass]="{'rotate-180': isDropdownOpen}">
+            </i>
           </div>
         </div>
 

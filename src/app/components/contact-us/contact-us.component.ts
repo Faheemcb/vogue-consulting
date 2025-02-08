@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class ContactUsComponent {
   selectedService: string = ''; // Stores the currently selected service
   selectedServices: string[] = []; // Stores all selected services
+  isDropdownOpen: boolean = false;
 
   addService() {
     if (
@@ -23,6 +24,11 @@ export class ContactUsComponent {
     this.selectedServices = this.selectedServices.filter(
       (item) => item !== service
     );
+  }
+
+  onServiceChange() {
+    console.log("Service selected:", this.selectedService);
+    this.isDropdownOpen = false; // Ensure chevron resets after selection
   }
 
 }
