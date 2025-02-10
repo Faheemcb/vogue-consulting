@@ -31,11 +31,20 @@
         <!-- Mobile Menu Dropdown (unchanged) -->
         <div *ngIf="isMobileMenuOpen" class="md:hidden fixed inset-0 bg-black/50 z-40" (click)="toggleMobileMenu()">
           <div class="absolute top-[120px] left-0 w-full bg-gradient-to-r from-[#570471] to-[#00058d] shadow-lg transform transition-transform duration-300 ease-in-out" (click)="$event.stopPropagation()">
-            <div class="flex flex-col items-center space-y-6 py-8 text-white text-xl">
-              <span class="hover:text-[#b424ff] cursor-pointer" routerLink="services" (click)="toggleMobileMenu()">Our Services</span>
-              <span class="hover:text-[#b424ff] cursor-pointer" routerLink="about-us" (click)="toggleMobileMenu()">About Us</span>
-              <span class="hover:text-[#b424ff] cursor-pointer" routerLink="contact-us" (click)="toggleMobileMenu()">Contact Us</span>
-              <div class="w-[250px] h-[60px] rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white flex items-center justify-center cursor-pointer hover:brightness-110 transition-all duration-300" (click)="openContactForm(); toggleMobileMenu()">
+            <!-- Added px-4 for horizontal padding and increased space-y-8 -->
+            <div class="flex flex-col items-center space-y-8 py-10 px-4 text-white text-xl">
+              <!-- Added py-2 to each item for vertical padding -->
+              <span class="hover:text-[#b424ff] cursor-pointer py-2 w-full text-center" routerLink="services" (click)="toggleMobileMenu()">
+                Our Services
+              </span>
+              <span class="hover:text-[#b424ff] cursor-pointer py-2 w-full text-center" routerLink="about-us" (click)="toggleMobileMenu()">
+                About Us
+              </span>
+              <span class="hover:text-[#b424ff] cursor-pointer py-2 w-full text-center" routerLink="contact-us" (click)="toggleMobileMenu()">
+                Contact Us
+              </span>
+              <!-- Added mt-4 to create extra space before the button -->
+              <div class="w-[250px] h-[60px] mt-4 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white flex items-center justify-center cursor-pointer hover:brightness-110 transition-all duration-300" (click)="openContactForm(); toggleMobileMenu()">
                 Get Your Free Audit
               </div>
             </div>
@@ -209,10 +218,10 @@
   </div>
 
   <div class="flex flex-col justify-center items-center text-center mb-10">
-    <span class="text-3xl sm:text-4xl md:text-5xl font-light text-[#e5d3ff] mb-5">
+    <span class="text-2xl md:text-5xl font-light text-[#e5d3ff] mb-5">
       Our Promise to You: Success Guarantee
     </span>
-    <span class="text-lg sm:text-xl text-white">
+    <span class="text-lg text-white">
       As a full-service digital marketing agency, we specialize in:
     </span>
   </div>
@@ -268,10 +277,10 @@
 </section>
 <div class="flex flex-col justify-center items-center py-16">
   <div class="text-center">
-    <h2 class="text-4xl md:text-6xl font-light text-purple-200 mb-4">
+    <h2 class="text-3xl md:text-6xl font-light text-purple-200 mb-4">
       What Sets Us Apart?
     </h2>
-    <p class="text-lg md:text-2xl font-light text-white max-w-3xl mx-auto">
+    <p class="text-xl md:text-2xl font-light text-white max-w-3xl mx-auto">
       We are the best data-driven marketing agency in the UK, committed to empowering businesses with
       intelligent marketing strategies that foster sustained growth. Our approach is anchored in:
     </p>

@@ -41,26 +41,26 @@
     </div>
 
     <!-- Contact Section -->
-    <section class="mt-10 justify-center mx-auto px-4 lg:mx-20 rounded-4xl relative z-10">
-      <div class="flex flex-col lg:flex-row items-center text-white p-8 lg:p-12 bg-gray-900 rounded-lg">
+    <section class="mt-10 px-4 lg:mx-20 rounded-4xl relative z-10">
+      <div class="flex flex-col lg:flex-row items-center text-white p-6 lg:p-12 bg-gray-900 rounded-lg">
         <!-- Left Section -->
-        <div class="flex flex-col space-y-4 pr-8 w-full lg:w-1/2 text-center lg:text-left">
-          <p class="text-lg lg:text-2xl text-gray-600">info&#64;vogueconsulting.co.uk</p>
-          <div class="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-4">
-            <img src="assets/img/group-48.png" alt="Contact" class="w-12 h-12 mx-auto lg:mx-0" />
-            <div>
+        <div class="flex flex-col space-y-4 w-full lg:w-1/2 lg:pr-8 mb-8 lg:mb-0">
+          <p class="text-lg lg:text-2xl text-white text-center lg:text-left">info&#64;vogueconsulting.co.uk</p>
+          <div class="flex flex-col lg:flex-row items-center justify-center lg:justify-start space-y-3 lg:space-y-0 lg:space-x-4">
+            <img src="assets/img/group-48.png" alt="Contact" class="w-12 h-12" />
+            <div class="text-center lg:text-left">
               <p>+44 1234 567890</p>
               <p>London, UK</p>
             </div>
           </div>
         </div>
-
-        <div class="h-40 border-l border-white mx-8 hidden lg:block"></div>
-
+    
+        <div class="h-px lg:h-40 w-full lg:w-px border-t lg:border-l border-white my-6 lg:my-0 lg:mx-8"></div>
+    
         <!-- Right Section -->
-        <div class="flex flex-col space-y-4 pl-8 w-full lg:w-1/2 text-center lg:text-left">
-          <p class="text-lg lg:text-2xl font-semibold">Connect with us</p>
-          <p class="font-light">
+        <div class="flex flex-col space-y-4 w-full lg:w-1/2 lg:pl-8">
+          <p class="text-lg lg:text-2xl font-semibold text-center lg:text-left">Connect with us</p>
+          <p class="font-light text-center lg:text-left">
             Follow us on social media to stay updated with our
             <br class="hidden md:block" />
             latest projects, tips, and insights.
@@ -73,6 +73,28 @@
         </div>
       </div>
     </section>
+  </div>
+
+  <div *ngIf="submissionSuccess" 
+       class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-2xl"
+       @toastAnimation>
+    <div class="bg-gray-950 text-white px-8 py-4 rounded-lg shadow-lg flex items-center gap-3 mx-4">
+      <div class="flex-shrink-0">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <div class="flex-grow">
+        <p class="text-sm opacity-90">Thank you for your submission. We'll get back to you soon.</p>
+      </div>
+      <button 
+        (click)="dismissToast()" 
+        class="flex-shrink-0 text-white/80 hover:text-white">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
   </div>
 
   <section class="px-4 mt-40">
@@ -89,7 +111,7 @@
     </div>
 
     <div class="p-6 lg:p-10 rounded-lg shadow-lg text-white">
-      <form>
+      <form (ngSubmit)="onSubmit()">
         <!-- Service Dropdown -->
         <div class="form-group mb-6">
           <label for="service" class="block text-2xl font-light mb-2">How can We Help?</label>
@@ -138,6 +160,8 @@
             <input
               type="text"
               id="name"
+              autocomplete="off"
+              [(ngModel)]="formData.name"
               name="name"
               placeholder="Enter your full name"
               class="w-full border border-gray-300 rounded-lg px-4 py-2 text-black focus:ring-2 focus:ring-purple-500 bg-white">
@@ -147,7 +171,9 @@
             <input
               type="email"
               id="email"
+              autocomplete="off"
               name="email"
+              [(ngModel)]="formData.email"
               placeholder="Enter your email"
               class="w-full border border-gray-300 rounded-lg px-4 py-2 text-black focus:ring-2 focus:ring-purple-500 bg-white">
           </div>
@@ -159,6 +185,7 @@
           <textarea
             id="message"
             name="message"
+            [(ngModel)]="formData.message"
             placeholder="What else can you share about the project"
             class="w-full h-40 border border-gray-300 rounded-lg px-4 py-2 text-black focus:ring-2 focus:ring-purple-500 resize-y bg-white"></textarea>
         </div>
@@ -167,7 +194,7 @@
         <div class="submit-btn flex justify-center lg:justify-end">
           <button
             type="submit"
-            class="w-full lg:w-[300px] h-12 lg:h-14 bg-transparent border border-white rounded-full text-white text-lg lg:text-xl font-medium hover:bg-purple-700 hover:text-black transition">
+            class="w-full lg:w-[300px] h-12 lg:h-14 bg-transparent border border-white rounded-full text-white text-lg lg:text-xl font-medium hover:bg-purple-700 hover:text-black transition cursor-pointer">
             Submit
           </button>
         </div>

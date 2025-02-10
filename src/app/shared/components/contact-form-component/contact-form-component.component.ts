@@ -174,15 +174,15 @@ export class ContactFormComponent {
   isOpen = false;
   submissionSuccess = false;
   
+  selectedService: string = '';
+  selectedServices: string[] = [];
+  
   formData: FormData = {
     name: '',
     email: '',
     message: ''
   };
   
-  selectedService: string = '';
-  selectedServices: string[] = [];
-
   addService(): void {
     if (this.selectedService && !this.selectedServices.includes(this.selectedService)) {
       this.selectedServices.push(this.selectedService);
