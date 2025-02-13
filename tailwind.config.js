@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Helvetica', 'Arial', 'sans-serif'], // Include Helvetica as the default sans-serif font
+        helvetica: ['Helvetica', 'Arial', 'sans-serif'], // Include Helvetica as the default sans-serif font
       },
     },
   },

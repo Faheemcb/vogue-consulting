@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
-body {
-  @apply bg-black text-white;
+
+/* Reset global padding and margin */
+html, body {
+  @apply p-0 m-0 bg-black text-white;
 }
 
 .banner {
@@ -14,4 +16,26 @@ body {
 
 .Ellipse-3 {
   @apply absolute top-[100%] right-0 transform -translate-y-1/2 w-[300px] h-[400px] max-w-full opacity-67 bg-gradient-to-r to-[#570471] via-[#570471] blur-[43.4px];
+}
+
+@layer utilities {
+  *::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+  }
+
+  *::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #0f0f0f;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #35033b;
+    border-radius: 100vh;
+    min-height: 100px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: #c0a0b9;
+  }
 }
