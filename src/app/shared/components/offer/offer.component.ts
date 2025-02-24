@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   template: `
     <header
       *ngIf="isVisible"
-      class="bg-black flex justify-between items-center px-4 sm:px-8 h-auto md:h-[90px] py-4 md:py-0 relative"
+      class="bg-[rgba(0,0,0,0.9)] flex justify-between items-center px-4 sm:px-8 h-auto md:h-[90px] py-4 md:py-0 relative"
     >
       <p
         class="text-sm sm:text-base md:text-lg lg:text-xl font-light text-white text-center flex-1 max-w-[80%] md:max-w-full truncate"

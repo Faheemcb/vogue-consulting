@@ -4,6 +4,9 @@
 /* Reset global padding and margin */
 html, body {
   @apply p-0 m-0 bg-black text-white;
+   /* Hide scrollbar */
+   scrollbar-width: none; /* Firefox */
+   -ms-overflow-style: none; /* IE 10+ */
 }
 
 .banner {
