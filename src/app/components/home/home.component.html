@@ -1,98 +1,98 @@
 <app-offer></app-offer>
-<section>
-  <div class="relative w-full scrollbar">
-    <!-- Gradient Backgrounds (unchanged) -->
-    <div class="absolute w-full hidden sm:block md:h-[527px] top-0 bg-gradient-to-r via-[#570471] to-[#3d0186] rounded-b-[230px] z-0"></div>
-    <div class="absolute w-full sm:hidden h-[400px] top-0 bg-gradient-to-r via-[#570471] to-[#00058d] rounded-b-[50px] z-0"></div>
+  <section>
+    <div class="relative w-full scrollbar">
+      <!-- Gradient Backgrounds (unchanged) -->
+      <div class="absolute w-full hidden sm:block md:h-[630px] top-0 rounded-b-[230px] z-0" style=" background-image: linear-gradient(112deg, #fff 0%, #000 0%, #570471 74%, #00058d 108%);"></div>
+      <div class="absolute w-full sm:hidden h-[400px] top-0 rounded-b-[50px] z-0" style=" background-image: linear-gradient(112deg, #fff 0%, #000 0%, #570471 74%, #00058d 108%);"></div>
 
-    <!-- Main Content -->
-    <div class="relative z-10"> 
-      <!-- Navigation (unchanged) -->
-      <div class="flex flex-col md:flex-row items-center px-4 md:px-6 py-4 md:ml-36">
-        <!-- Logo - increased size -->
-        <img 
-          src="assets/img/image-1.png" 
-          alt="Logo" 
-          class="w-[120px] md:w-[100px] h-auto md:h-[60px] mb-4 md:mb-0 md:mr-5"
-        >
-        
-        <!-- Desktop Navigation -->
-        <div class="hidden md:flex flex-col md:flex-row gap-6 md:gap-20 text-white text-base md:text-lg font-sans cursor-pointer md:ml-24">
-          <span class="hover:text-[#b424ff]" routerLink="services">Our Services</span>
-          <span class="hover:text-[#b424ff]" routerLink="about-us">About Us</span>
-          <span class="hover:text-[#b424ff]" routerLink="contact-us">Contact Us</span>
-        </div>
+      <!-- Main Content -->
+      <div class="relative z-10"> 
+        <!-- Navigation (unchanged) -->
+        <div class="flex flex-col md:flex-row items-center px-4 md:px-6 py-4 md:ml-20">
+          <!-- Logo - increased size -->
+          <img 
+            src="assets/img/image-1.png" 
+            alt="Logo" 
+            class="w-[100px] md:w-[152px] h-auto md:h-[100px] mb-4 md:mb-0 md:mr-5"
+          >
+          
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex flex-col md:flex-row gap-6 md:gap-20 text-white text-base md:text-lg font-sans cursor-pointer md:ml-10 font-light">
+            <span class="hover:text-[#b424ff]" routerLink="services">Our Services</span>
+            <span class="hover:text-[#b424ff]" routerLink="about-us">About Us</span>
+            <span class="hover:text-[#b424ff]" routerLink="contact-us">Contact Us</span>
+          </div>
 
-        <!-- Mobile Hamburger Menu (unchanged) -->
-        <div class="md:hidden self-end absolute top-4 right-4">
-          <button class="text-white focus:outline-none" (click)="toggleMobileMenu()">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path *ngIf="!isMobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              <path *ngIf="isMobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
+          <!-- Mobile Hamburger Menu (unchanged) -->
+          <div class="md:hidden self-end absolute top-4 right-4">
+            <button class="text-white focus:outline-none" (click)="toggleMobileMenu()">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path *ngIf="!isMobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                <path *ngIf="isMobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
 
-        <!-- Mobile Menu Dropdown (unchanged) -->
-        <div *ngIf="isMobileMenuOpen" class="md:hidden fixed inset-0 bg-black/50 z-40" (click)="toggleMobileMenu()">
-          <div class="absolute top-[120px] left-0 w-full bg-gradient-to-r from-[#570471] to-[#00058d] shadow-lg transform transition-transform duration-300 ease-in-out" (click)="$event.stopPropagation()">
-            <!-- Added px-4 for horizontal padding and increased space-y-8 -->
-            <div class="flex flex-col items-center space-y-8 py-10 px-4 text-white text-xl">
-              <!-- Added py-2 to each item for vertical padding -->
-              <span class="hover:text-[#b424ff] cursor-pointer py-2 w-full text-center" routerLink="services" (click)="toggleMobileMenu()">
-                Our Services
-              </span>
-              <span class="hover:text-[#b424ff] cursor-pointer py-2 w-full text-center" routerLink="about-us" (click)="toggleMobileMenu()">
-                About Us
-              </span>
-              <span class="hover:text-[#b424ff] cursor-pointer py-2 w-full text-center" routerLink="contact-us" (click)="toggleMobileMenu()">
-                Contact Us
-              </span>
-              <!-- Added mt-4 to create extra space before the button -->
-              <div class="mt-4 md:mt-[-30px] mx-4 md:ml-20 md:w-[380px] h-[60px] px-4 md:px-6 py-3 md:py-4 border-4 border-white rounded-full flex items-center justify-between md:space-x-2 cursor-pointer transition-all duration-300 ease-in-out bg-transparent hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 hover:border-transparent hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50" (click)="openContactForm(); toggleMobileMenu()">
-                Get Your Free Audit
+          <!-- Mobile Menu Dropdown (unchanged) -->
+          <div *ngIf="isMobileMenuOpen" class="md:hidden fixed inset-0 bg-black/50 z-40" (click)="toggleMobileMenu()">
+            <div class="absolute top-[100px] left-0 w-sm bg-gradient-to-r from-[#570471] to-[#00058d] shadow-lg transform transition-transform duration-300 ease-in-out" (click)="$event.stopPropagation()">
+              <!-- Added px-4 for horizontal padding and increased space-y-8 -->
+              <div class="flex flex-col items-center justify-center space-y-6 py-10 px-4 text-white text-xl">
+                <!-- Added py-2 to each item for vertical padding -->
+                <span class="hover:text-[#b424ff] cursor-pointer py-2 w-full text-center" routerLink="services" (click)="toggleMobileMenu()">
+                  Our Services
+                </span>
+                <span class="hover:text-[#b424ff] cursor-pointer py-2 w-full text-center" routerLink="about-us" (click)="toggleMobileMenu()">
+                  About Us
+                </span>
+                <span class="hover:text-[#b424ff] cursor-pointer py-2 w-full text-center" routerLink="contact-us" (click)="toggleMobileMenu()">
+                  Contact Us
+                </span>
+                <!-- Added mt-4 to create extra space before the button -->
+                <div class="mt-4 md:mt-[-30px] mx-4 md:ml-20 md:w-[380px] h-[60px] px-4 md:px-6 py-3 md:py-4 border-4 border-white rounded-full flex items-center justify-center md:space-x-2 cursor-pointer transition-all duration-300 ease-in-out bg-transparent hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 hover:border-transparent hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50" (click)="openContactForm(); toggleMobileMenu()">
+                  Get Your Free Audit
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Desktop Images Section (unchanged) -->
-      <div class="relative hidden md:block">
-        <img src="assets/img/image-2.png" alt="" class="absolute top-[10px] right-[225px] w-[325px] h-[425px] object-contain z-20">
-        <div class="absolute top-[150px] right-[400px] w-[144px] h-[144px] rounded-full blur-lg bg-gradient-to-r from-yellow-500 via-purple-600 to-blue-500 border border-gray-400"></div>
-        <img src="assets/img/image-3.png" alt="" class="absolute top-[-40px] right-[140px] w-[500px] h-[270px] z-30">
-        <img src="assets/img/ellipse-2.png" alt="" class="absolute top-[-400px] right-[83px] w-[600px] h-[600px] rounded-full opacity-40 border-4 border-purple-700 z-10">
-        <img src="assets/img/group-5.png" alt="" class="absolute top-[-254px] right-[180px] w-[235px] h-[349px]">
-      </div>
-
-      <!-- Updated Get in Touch Section -->
-      <div class="flex flex-col md:flex-row items-center md:space-y-0 md:space-x-6 px-4 md:px-0 mt-8 md:mt-0">
-        <!-- Get in Touch Button - Hidden on mobile -->
-        <div class="hidden md:block w-[50px] h-[150px] p-3 rounded-br-[10px] rounded-tr-[10px] bg-gradient-to-b from-purple-800 to-blue-800 justify-center items-center cursor-pointer">
-          <span id="contact_form" class="text-white text-[20px] leading-none [writing-mode:vertical-rl] rotate-180 whitespace-nowrap">
-            Get in Touch
-          </span>
+        <!-- Desktop Images Section (unchanged) -->
+        <div class="relative hidden md:block">
+          <img src="assets/img/image-2.png" alt="" class="absolute top-[-63px] right-[285px] w-[350px] h-[600px] object-contain z-20">
+          <div class="absolute top-[200px] right-[390px] w-[288px] h-[288px] rounded-full blur-lg" style="  background-image: linear-gradient(47deg, #e6b23f 14%, #a7369c 49%, #5d5fdf 80%);"></div>
+          <img src="assets/img/image-3.png" alt="" class="absolute top-[-42px] right-[215px] w-[500px] h-[270px] z-30">
+          <img src="assets/img/ellipse-2.png" alt="" class="absolute top-[-370px] right-[130px] w-[600px] h-[600px] rounded-full opacity-40 border-4 border-purple-700 z-10">
+          <img src="assets/img/group-5.png" alt="" class="absolute top-[-254px] right-[225px] w-[235px] h-[349px]">
         </div>
-        
-        <!-- Content - Adjusted for mobile -->
-        <div class="w-[699px] h-[228px] mt-[90px] mb-[32px] lg:ml-[80px] font-sans text-[25px] md:text-[40px] lg:text-[50px] font-normal leading-[1.18] text-[#ffffff] text-center md:text-left lg:text-left">
-          Data-Driven Marketing <br />
-          Solutions for <br />
-          <span style="color: #a76aff;">Revenue Growth</span>
-        </div>
-      </div>
 
-      <!-- Free Audit Button -->
-      <div class="mt-4 md:mt-[-50px] mx-4 md:ml-[150px] md:w-[320px] h-[60px] px-4 md:px-6 py-3 md:py-4 border-4 border-white rounded-full flex items-center justify-between md:space-x-2 cursor-pointer transition-all duration-300 ease-in-out bg-transparent hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 hover:border-transparent hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50" (click)="openContactForm()">
-        <a class="text-white text-base md:text-[20px] transition-colors duration-300 hover:text-gray-100">
-          Get Your Free Audit Now
-        </a>
-        <i class="fa-solid fa-arrow-right text-white text-[18px] md:text-[22px] transition-transform duration-300 group-hover:translate-x-2"></i>
+        <!-- Updated Get in Touch Section -->
+        <div class="flex flex-col md:flex-row items-center md:space-y-0 px-4 md:px-0 mt-8 md:mt-0"> 
+          <!-- Get in Touch Button - Hidden on mobile -->
+          <div class="hidden md:block w-[60px] h-[220px] rounded-br-[35px] rounded-tr-[35px] cursor-pointer relative" style=" background-image: linear-gradient(152deg, #9f00d1 1%, #4b00d3 56%);">
+            <span id="contact_form" class="text-white text-[18px] [writing-mode:vertical-lr] rotate-180 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              Get in Touch
+            </span> 
+          </div>
+          
+          <!-- Content - Adjusted for mobile -->
+          <div class="w-[699px] h-[228px] mt-[110px] mb-[32px] lg:ml-[150px] font-sans text-[24px] md:text-[40px] lg:text-[55px] font-normal leading-[1.18] text-[#ffffff] text-center md:text-left lg:text-left">
+            Data-Driven Marketing <br />
+            Solutions for <br />
+            <span style="color: #a76aff;">Revenue Growth</span>
+          </div>
+        </div>
+
+        <!-- Free Audit Button -->
+        <div class="mx-4 lg:ml-[220px] md:w-[380px] h-[60px] px-4 md:px-6 py-3 md:py-4 border-4 border-white rounded-full flex items-center justify-between md:space-x-2 cursor-pointer transition-all duration-300 ease-in-out bg-transparent hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 hover:border-transparent hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50" (click)="openContactForm()">
+          <a class="text-white text-base md:text-[20px] transition-colors duration-300 hover:text-gray-100">
+            Get Your Free Audit Now
+          </a>
+          <i class="fa-solid fa-arrow-right text-white text-[18px] md:text-[22px] transition-transform duration-300 group-hover:translate-x-2"></i>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
   <section>
    
     <div class="w-full text-center mt-20 sm:mt-40 md:mt-25 px-4">
@@ -112,15 +112,15 @@
   
       <!-- Main Banner -->
       <div class="mt-4 px-4">
-          <p class="text-white text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-light leading-tight text-center mx-auto p-4 sm:p-5">
+          <p class="text-white text-2xl sm:text-3xl md:text-3xl lg:text-5xl font-light leading-tight text-center mx-auto p-4 sm:p-5">
               We don't just create marketing campaigns—we <br class="hidden sm:block">
               engineer success stories.
           </p>
       </div>
   
       <!-- Description Text -->
-      <div class="text-center max-w-[1000px] mx-auto px-4">
-          <span class="text-white text-lg sm:text-xl md:text-xl font-light leading-relaxed block">
+      <div class="text-center mx-auto px-4">
+          <span class="text-white text-base sm:text-xl md:text-xl lg:text-[30px] font-light block">
               As 
               <span class="font-normal text-[#d562cc]">a data-driven, result-oriented marketing agency based in the UK,</span>
               we deliver <br> measurable outcomes, enabling businesses to scale and thrive. 
@@ -131,86 +131,86 @@
   
       <!-- Background Blur Effect -->
        <!-- <div class="Ellipse-3"></div> -->
-       <div class="absolute right-0 top-[130%] sm:w-[200px] h-[150px] sm:h-[150px] bg-gradient-to-r from-[#570471] to-[#9905c2] opacity-40 blur-[40px]"></div>
+       <div class="absolute right-0 top-[130%] sm:w-[200px] h-[150px] lg:h-[400px] sm:h-[150px] bg-gradient-to-r from-[#570471] to-[#9905c2] opacity-40 blur-[40px]"></div>
       </div>
 <div class="relative p-6 sm:p-12 flex justify-center items-center">
   <div class="flex flex-col lg:flex-row justify-start items-center lg:items-start gap-8 lg:gap-10 w-full max-w-[1200px]">
       <!-- Image -->
       <img src="assets/img/handshake.png" 
           alt="Cyberpunk Illustration"
-          class="relative mt-20 w-full max-w-[300px] sm:max-w-[350px] md:max-w-[400px] h-auto object-contain rounded-[30px] sm:rounded-[40px] lg:rounded-[57px] z-10">
+          class="relative mt-20 w-full lg:w-[500px] lg:right-15 h-96 object-contain rounded-[30px] sm:rounded-[40px] lg:rounded-[57px] z-10">
       
       <!-- Text Content -->
-      <div class="flex flex-col mt-20 justify-start items-start max-w-full lg:max-w-[700px] z-10 text-center lg:text-left ml-20">
-          <span class="text-[#e5d3ff] text-2xl sm:text-3xl md:text-4xl font-light leading-[1.2] mb-4 sm:mb-6">
+      <div class="flex flex-col mt-20 justify-start items-start z-10 text-center lg:text-left">
+          <span class="text-[#e5d3ff] text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-light leading-[1.2] mb-4 sm:mb-6">
               Customer-Centric Marketing <br class="hidden sm:block"> that Delivers Results
           </span>
-          <span class="text-white text-base sm:text-lg md:text-xl font-light leading-[1.5]">
-              We don’t believe in one-size-fits-all solutions. Every <br> business is unique, and so are its marketing needs. 
-              At <br> Marketing Hub, we take a customer-centric approach, <br> focusing on your business’s specific goals and 
-              challenges. <br> Whether you’re a B2B, B2C, or SaaS business, we develop <br> personalized strategies using competitor 
-              analysis, deep <br> market study, and data-driven insights to achieve <br> high-stream revenue.
+          <span class="text-white text-base lg:text-[25px] font-light">
+              We don’t believe in one-size-fits-all solutions. Every business is unique, and so are its marketing needs. 
+              At Marketing Hub, we take a customer-centric approach, focusing on your business’s specific goals and 
+              challenges. Whether you’re a B2B, B2C, or SaaS business, we develop  personalized strategies using competitor 
+              analysis, deep market study, and data-driven insights to achieve  high-stream revenue.
           </span>
       </div>
   </div>
 
   <!-- Background Blur -->
-  <div class="absolute top-[80%] left-[20px] transform -translate-x-1/2 -translate-y-1/2 w-[200px] sm:w-[300px] h-[250px] sm:h-[350px] bg-gradient-to-br from-[#570471] to-[#570471] opacity-40 blur-[30px] sm:blur-[43px] z-0"></div>
+  <div class="absolute top-[70%] left-[100px] transform -translate-x-1/2 -translate-y-1/2 w-[200px] sm:w-[300px] h-[250px] sm:h-[350px] bg-gradient-to-br from-[#570471] to-[#570471] opacity-40 blur-[30px] sm:blur-[43px] z-0"></div>
 </div>
 <div class="flex flex-col items-center mt-8 px-4 sm:px-8">
-  <p class="text-2xl sm:text-3xl md:text-4xl font-light text-[#e5d3ff] mt-10 sm:mt-16 text-center">
+  <p class="text-2xl sm:text-3xl lg:text-[54px] font-light text-[#e5d3ff] mt-10 sm:mt-16 text-center">
       Our Core Services
   </p>
-  <span class="text-lg sm:text-xl font-light text-white text-center max-w-[90%] sm:max-w-[80%]">
+  <span class=" mt-10 text-lg sm:text-xl lg:text-[30px] font-light text-white text-center max-w-[90%] sm:max-w-[80%]">
       As a full-service digital marketing agency, we specialize in:
   </span>
 
   <div class="relative flex justify-center items-center mt-12 cursor-pointer w-full">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-8 justify-center items-center relative z-10">
           <!-- Card 1 -->
-          <div class="flex flex-col justify-between items-start w-full sm:w-[400px] lg:w-[500px] h-[260px] p-5 bg-[#121212] rounded-lg overflow-hidden relative transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-r from-[#590474] to-[#30057e]">
-              <div class="flex items-center gap-3 mb-3 w-full">
-                  <img src="assets/img/group-17.png" alt="Social Media Icon" class="w-10 sm:w-12 h-10 sm:h-12">
-                  <span class="text-white font-bold text-xl sm:text-2xl font-sans">Social Media <br> Marketing</span>
+          <div class="flex flex-col justify-between items-start w-full lg:p-10 lg:h-[350px] p-5 bg-[#121212] rounded-[30px] overflow-hidden relative transition-transform duration-300 ease-in-out hover:bg-gradient-to-r from-[#590474] to-[#30057e]">
+              <div class="flex items-center gap-10 mb-3 w-full">
+                  <img src="assets/img/group-17.png" alt="Social Media Icon" class="w-10 sm:w-12 h-10 sm:h-12 lg:w-[112px] lg:h-[114px]">
+                  <span class="text-white font-bold text-xl sm:text-2xl lg:text-[38px] font-sans">Social Media Marketing</span>
               </div>
-              <p class="text-white text-sm sm:text-base font-light leading-relaxed mt-5 mb-4">
-                  Build strong connections with your audience and convert leads into loyal customers with targeted social media campaigns.
+              <p class="text-white text-sm sm:text-base lg:text-[25px] font-light leading-relaxed mt-5 mb-4">
+                  Build strong connections with your audience and convert leads into loyal customers with targeted social media campaigns
               </p>
           </div>
           <!-- Card 2 -->
-          <div class="flex flex-col justify-between items-start w-full sm:w-[400px] lg:w-[500px] h-[260px] p-5 bg-[#121212] rounded-lg overflow-hidden relative transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-r from-[#590474] to-[#30057e]">
+          <div class="flex flex-col justify-between items-start w-full lg:p-10 lg:h-[350px] p-5 bg-[#121212] rounded-[30px] overflow-hidden relative transition-transform duration-300 ease-in-out  hover:bg-gradient-to-r from-[#590474] to-[#30057e]">
               <div class="flex items-center gap-3 mb-3 w-full">
-                  <img src="assets/img/group-19.png" alt="Google Ads Icon" class="w-10 sm:w-12 h-10 sm:h-12">
-                  <span class="text-white font-bold text-xl sm:text-2xl font-sans">Google Ads <br> (PPC)</span>
+                  <img src="assets/img/group-19.png" alt="Google Ads Icon" class="w-10 sm:w-12 h-10 sm:h-12 lg:w-[112px] lg:h-[114px]">
+                  <span class="text-white font-bold text-xl sm:text-2xl lg:text-[38px] font-sans">Google Ads <br> (PPC)</span>
               </div>
-              <p class="text-white text-sm sm:text-base font-light leading-relaxed mt-5 mb-4">
+              <p class="text-white text-sm sm:text-base lg:text-[25px]  font-light leading-relaxed mt-5 mb-4">
                   Drive immediate traffic and conversions with precision-targeted Google Ads campaigns.
               </p>
           </div>
           <!-- Card 3 -->
-          <div class="flex flex-col justify-between items-start w-full sm:w-[400px] lg:w-[500px] h-[260px] p-5 bg-[#121212] rounded-lg overflow-hidden relative transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-r from-[#590474] to-[#30057e]">
+          <div class="flex flex-col justify-between items-start w-full lg:p-10 lg:h-[350px] p-5 bg-[#121212] rounded-[30px] overflow-hidden relative transition-transform duration-300 ease-in-out  hover:bg-gradient-to-r from-[#590474] to-[#30057e]">
               <div class="flex items-center gap-3 mb-3 w-full">
-                  <img src="assets/img/group-21.png" alt="Content Writing Icon" class="w-10 sm:w-12 h-10 sm:h-12">
-                  <span class="text-white font-bold text-xl sm:text-2xl font-sans">Content <br> Writing</span>
+                  <img src="assets/img/group-21.png" alt="Content Writing Icon" class="w-10 sm:w-12 h-10 sm:h-12 lg:w-[112px] lg:h-[114px]">
+                  <span class="text-white font-bold text-xl sm:text-2xl lg:text-[38px] font-sans">Content <br> Writing</span>
               </div>
-              <p class="text-white text-sm sm:text-base font-light leading-relaxed mt-5 mb-4">
+              <p class="text-white text-sm sm:text-base lg:text-[25px]  font-light leading-relaxed mt-5 mb-4">
                   Deliver impactful, high-quality content that boosts engagement and drives conversions.
               </p>
           </div>
           <!-- Card 4 -->
-          <div class="flex flex-col justify-between items-start w-full sm:w-[400px] lg:w-[500px] h-[260px] p-5 bg-[#121212] rounded-lg overflow-hidden relative transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-r from-[#590474] to-[#30057e]">
+          <div class="flex flex-col justify-between items-start w-full lg:p-10 lg:h-[350px] p-5 bg-[#121212] rounded-[30px] overflow-hidden relative transition-transform duration-300 ease-in-out  hover:bg-gradient-to-r from-[#590474] to-[#30057e]">
               <div class="flex items-center gap-3 mb-3 w-full">
-                  <img src="assets/img/group-23.png" alt="Web Design Icon" class="w-10 sm:w-12 h-10 sm:h-12">
-                  <span class="text-white font-bold text-xl sm:text-2xl font-sans">Web Design & <br> Development</span>
+                  <img src="assets/img/group-23.png" alt="Web Design Icon" class="w-10 sm:w-12 h-10 sm:h-12 lg:w-[112px] lg:h-[114px]">
+                  <span class="text-white font-bold text-xl sm:text-2xl lg:text-[38px] font-sans">Web Design & <br> Development</span>
               </div>
-              <p class="text-white text-sm sm:text-base font-light leading-relaxed mt-5 mb-4">
+              <p class="text-white text-sm sm:text-base lg:text-[25px]  font-light leading-relaxed mt-5 mb-4">
                   Our focus is on simplicity and accessibility, providing every business with high-quality, cost-effective web design.
               </p>
           </div>
       </div>
 
       <!-- Background Ellipse -->
-      <div class="absolute top-[50%] sm:right-[-30px] transform translate-y-[-50%] w-[200px] sm:w-[300px] h-[300px] sm:h-[400px] z-1 opacity-40 filter blur-[30px] bg-gradient-to-br from-[#570471] via-[#570471] pointer-events-none"></div>
+      <div class="absolute top-[95%] sm:right-[-30px] transform translate-y-[-50%] w-[200px] sm:w-[300px] h-[300px] sm:h-[380px] z-1 opacity-40 filter blur-[30px] bg-gradient-to-br from-[#570471] via-[#570471] pointer-events-none"></div>
     </div>
 </div>
 </section>
@@ -221,179 +221,189 @@
     </span>
   </div>
 
-  <div class="flex flex-col justify-center items-center text-center mb-10">
+  <div class="flex flex-col justify-center items-center text-center mb-16">
     <span class="text-2xl md:text-5xl font-light text-[#e5d3ff] mb-5">
       Our Promise to You: Success Guarantee
     </span>
-    <span class="text-lg text-white">
+    <span class="text-lg text-white lg:text-[25px]">
       As a full-service digital marketing agency, we specialize in:
     </span>
   </div>
 
-  <div class="relative p-5 rounded-3xl max-w-screen-lg mx-auto mb-12">
-    <div class="flex flex-col md:flex-row gap-5 items-start mb-16 bg-gradient-to-tl from-[#330043] to-[#160040] p-5 rounded-lg">
-      <div class="flex flex-col gap-5">
+  <div class="relative p-5 rounded-3xl mb-12">
+    <div class="flex flex-col md:flex-row gap-5 lg:h-[400px] items-start mb-16 rounded-[30px] bg-gradient-to-tl from-[#10002e] to-[#10002e]">
+      <div class="flex flex-col gap-5 p-10">
         <div class="flex items-center gap-4">
           <img src="assets/img/group-31.png" class="w-16 sm:w-20 h-20 sm:h-24 object-contain" alt="Group Icon">
-          <span class="text-2xl sm:text-3xl font-bold text-white">Growth Guarantee</span>
+          <span class="text-2xl sm:text-3xl lg:text-[42px] font-bold text-white">Growth Guarantee</span>
         </div>
-        <span class="text-base sm:text-lg text-white font-light leading-7">
+        <span class="text-base sm:text-lg lg:text-[25px] text-white font-light leading-8">
           Vogue Consulting UK promises to achieve specified growth objectives within 
           six months of engagement. If the objectives are not met, they will continue to 
-          provide their services at no extra cost until these goals are achieved.
+          provide their services at no extra cost until these goals are achieved. This 
+          acknowledges that each company’s growth trajectory is unique and may 
+          require tailored strategies and time to optimize.
         </span>
       </div>
       <img src="assets/img/photo-business-finance-employment-female.png"
-        class="w-full md:w-[40%] max-h-96 opacity-90 ml-auto" 
-        alt="Business Woman">
+      class="w-full md:w-[40%] lg:w-[705px] lg:h-[400px] opacity-90 ml-auto rounded-[30px] object-cover"
+      alt="Business Woman"
+      style="mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 1) 40%);
+             -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 1) 40%);">
     </div>
 
-    <div class="flex flex-col md:flex-row gap-5 justify-center mb-16">
-      <div class="w-full max-w-xl bg-gradient-to-tl from-[#330043] to-[#160040] p-6 md:p-10 rounded-2xl flex flex-col justify-between shadow-lg">
+    <div class="flex flex-col md:flex-row gap-5 mb-16">
+      <div class="bg-gradient-to-tl from-[#1a0122] to-[#1c0448] p-6 md:p-10 rounded-[30px] flex flex-col shadow-lg flex-1">
         <div class="flex items-center gap-4">
           <img src="assets/img/group-33.png" class="w-12 sm:w-16 h-12 sm:h-16 object-contain" alt="Refund Guarantee Icon">
-          <span class="text-xl sm:text-2xl font-bold text-white">Refund Guarantee</span>
+          <span class="text-xl sm:text-2xl lg:text-[30px] font-bold text-white font-sans">Refund Guarantee</span>
         </div>
-        <span class="text-base sm:text-lg text-white opacity-80">
+        <span class="text-base sm:text-lg text-white opacity-80 lg:text-[25px] font-sans font-light leading-8">
           If results are not delivered within three months, 
           Vogue Consulting UK offers a full refund of the 
-          management fee.
+          management fee. This guarantee reflects their 
+          confidence in meeting project specifications 
+          and delivering tangible results swiftly.
         </span>
       </div>
-
-      <div class="w-full max-w-xl bg-gradient-to-tl from-[#330043] to-[#1c0448] p-6 md:p-10 rounded-2xl flex flex-col justify-between shadow-lg">
+    
+      <div class="bg-gradient-to-tl from-[#1a0122] to-[#1c0448] p-6 md:p-10 rounded-[30px] flex flex-col shadow-lg lg:w-[650px] lg:min-h-[330px] flex-1">
         <div class="flex items-center gap-4">
           <img src="assets/img/group-35.png" class="w-12 sm:w-16 h-12 sm:h-16 object-contain" alt="High Quality Guarantee Icon">
-          <span class="text-xl sm:text-2xl font-bold text-white">High Quality of Work</span>
+          <span class="text-xl sm:text-2xl lg:text-[30px] font-bold text-white font-sans">High Quality of Work</span>
         </div>
-        <span class="text-base sm:text-lg text-white opacity-80">
+        <span class="text-base sm:text-lg text-white opacity-80 lg:text-[25px] font-sans font-light leading-8">
           Vogue Consulting UK is committed to delivering 
-          work of the highest quality that surpasses 
-          client expectations.
+          work of the highest quality that satisfies or 
+          surpasses client expectations. They focus on 
+          achieving serious, impactful results, ensuring every 
+          project is approached with a results-first mentality.
         </span>
       </div>
     </div>
 
     <div class="w-72 sm:w-96 h-16 mx-auto p-4 bg-transparent border-2 border-white rounded-full flex justify-center items-center hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 hover:border-transparent hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50">
-      <span class="text-lg sm:text-xl text-white cursor-pointer" (click)="openContactForm()">Get Your Free Audit Now</span>
+      <span class="text-lg sm:text-xl lg:text-[25px] text-white cursor-pointer" (click)="openContactForm()">Get Your Free Audit Now</span>
     </div>
   </div>
 </section>
 <div class="flex flex-col justify-center items-center py-16">
   <div class="text-center">
-    <h2 class="text-3xl md:text-4xl font-light text-purple-200 mb-4">
+    <h2 class="text-3xl lg:text-[50px] font-light text-purple-200 mb-4">
       What Sets Us Apart?
     </h2>
-    <p class="text-xl md:text-xl font-light text-white max-w-3xl mx-auto">
-      We are the best data-driven marketing agency in the UK, committed to empowering businesses with
+    <p class="text-base md:text-xl lg:text-[30px] font-light text-white">
+      We are the best data-driven marketing agency in the UK, committed to empowering businesses with <br>
       intelligent marketing strategies that foster sustained growth. Our approach is anchored in:
     </p>
   </div>
 </div>
 
-<div class="flex flex-wrap items-center justify-center gap-24 px-6 md:px-10 py-24">
+<div class="flex flex-wrap gap-24 px-6 md:px-10">
   <!-- Reusable Section -->
-  <div class="space-y-32 w-full max-w-6xl">
+  <div class="space-y-32 w-full">
     <!-- Section 1 -->
-    <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24 p-6">
-      <div class="relative w-full max-w-[400px]">
-        <div class="absolute -bottom-6 -right-12 bg-gradient-to-r from-purple-900 to-purple-700 opacity-30 rounded-lg w-50 h-50"></div>
-        <img src="assets/img/mask-group-1.png" alt="Main Image" class="w-full h-64 object-cover relative z-10 rounded-lg">
+    <div class="flex flex-col md:flex-row gap-12 md:gap-24 p-6">
+      <div class="relative w-full">
+        <div class="absolute -bottom-6 -right-2 opacity-30 rounded-[30px] w-50 h-50 lg:w-[300px] lg:h-[250px]" style=" background-image: linear-gradient(113deg, #590474 4%, #30057e 83%);"></div>
+        <img src="assets/img/mask-group-1.png" alt="Main Image" class="w-full h-64 lg:w-[600px] lg:h-[350px] object-cover relative z-10 rounded-[30px]">
       </div>
-      <div class="flex flex-col justify-center max-w-lg text-center md:text-left space-y-6">
+      <div class="flex flex-col md:text-left space-y-6">
         <img src="assets/img/group-11.png" alt="Group 11" class="w-20 h-20 mx-auto md:mx-0">
-        <h3 class="text-2xl md:text-2xl font-bold text-white">
+        <h3 class="text-2xl md:text-2xl lg:text-[40px] font-bold text-white font-sans">
           Data-Driven Insights
         </h3>
-        <p class="text-lg text-white">
+        <p class="text-lg text-white lg:text-[25px] font-light">
           Using sophisticated analytics to understand your market dynamics, audience behaviors, and key performance indicators (KPIs).
         </p>
         <div class="flex items-center justify-center md:justify-start gap-3 pt-2">
           <img src="assets/img/path-15.png" alt="Path 15" class="w-6">
-          <a href="#" class="text-lg text-white hover:text-purple-300 transition-colors">Learn More</a>
+          <a href="#" class="text-lg text-white hover:text-purple-300 transition-colors font-light lg:text-[25px]">Learn More</a>
         </div>
       </div>
     </div>
 
     <!-- Section 2 -->
-    <div class="flex flex-col md:flex-row-reverse items-center gap-12 md:gap-24 p-6">
-      <div class="relative w-full max-w-[400px]">
-        <div class="absolute -bottom-6 -left-12 bg-gradient-to-r from-purple-900 to-purple-700 opacity-30 rounded-lg w-50 h-50"></div>
-        <img src="assets/img/mask-group-2.png" alt="Main Image" class="w-full h-64 object-cover relative z-10 rounded-lg">
+    <div class="flex flex-col md:flex-row-reverse gap-12 md:gap-24 p-6">
+      <div class="relative w-full">
+        <div class="absolute -bottom-6 -left-12 opacity-30 rounded-[30px] w-50 h-50 lg:w-[300px] lg:h-[250px]" style=" background-image: linear-gradient(113deg, #590474 4%, #30057e 83%);"></div>
+        <img src="assets/img/mask-group-2.png" alt="Main Image" class="w-full h-64 lg:w-[600px] lg:h-[350px] object-cover relative z-10 rounded-[30px]">
       </div>
-      <div class="flex flex-col justify-center max-w-lg text-center md:text-left space-y-6">
-        <img src="assets/img/group-13.png" alt="Group 13" class="w-20 h-20 mx-auto md:mx-0">
-        <h3 class="text-2xl md:text-3xl font-bold text-white">
+      <div class="flex flex-col md:text-left space-y-6">
+        <img src="assets/img/group-13.png" alt="Group 13" class="w-20 h-20 md:mx-0">
+        <h3 class="text-2xl md:text-3xl lg:text-[40px]  font-bold text-white">
           Results-Oriented Performance
         </h3>
-        <p class="text-lg text-white">
+        <p class="text-lg text-white lg:text-[25px] font-light">
           We prioritize high ROI, ensuring every marketing action is aligned with your business objectives, leading to measurable results.
         </p>
         <div class="flex items-center justify-center md:justify-start gap-3 pt-2">
           <img src="assets/img/path-15.png" alt="Path 15" class="w-6">
-          <a href="#" class="text-lg text-white hover:text-purple-300 transition-colors">Learn More</a>
+          <a href="#" class="text-lg text-white hover:text-purple-300 transition-colors font-light lg:text-[25px]">Learn More</a>
         </div>
       </div>
     </div>
 
     <!-- Section 3 -->
     <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24 p-6">
-      <div class="relative w-full max-w-[400px]">
-        <div class="absolute -bottom-6 -right-12 bg-gradient-to-r from-purple-900 to-purple-700 opacity-30 rounded-lg w-50 h-50"></div>
-        <img src="assets/img/mask-group-3.png" alt="Main Image" class="w-full h-64 object-cover relative z-10 rounded-lg">
+      <div class="relative w-full">
+        <div class="absolute -bottom-6 -right-2 opacity-30 rounded-[30px] w-50 h-50 lg:w-[300px] lg:h-[250px]" style=" background-image: linear-gradient(113deg, #590474 4%, #30057e 83%);"></div>
+        <img src="assets/img/mask-group-3.png" alt="Main Image" class="w-full h-64 lg:w-[600px] lg:h-[350px] object-cover relative z-10 rounded-[30px]">
       </div>
-      <div class="flex flex-col justify-center max-w-lg text-center md:text-left space-y-6">
+      <!-- max-w-lg  -->
+      <div class="flex flex-col justify-center text-center md:text-left space-y-6">
         <img src="assets/img/group-9.png" alt="Group 9" class="w-20 h-20 mx-auto md:mx-0">
-        <h3 class="text-2xl md:text-3xl font-bold text-white">
+        <h3 class="text-2xl md:text-3xl lg:text-[40px] font-bold text-white">
           Customer-Centric Strategies
         </h3>
-        <p class="text-lg text-white">
+        <p class="text-lg text-white lg:text-[25px] font-light">
           Every campaign is designed to resonate with your audience, addressing their needs and delivering personalized experiences.
         </p>
         <div class="flex items-center justify-center md:justify-start gap-3 pt-2">
           <img src="assets/img/path-15.png" alt="Path 15" class="w-6">
-          <a href="#" class="text-lg text-white hover:text-purple-300 transition-colors">Learn More</a>
+          <a href="#" class="text-lg text-white hover:text-purple-300 transition-colors font-light lg:text-[25px]">Learn More</a>
         </div>
       </div>
     </div>
 
     <!-- Section 4 -->
     <div class="flex flex-col md:flex-row-reverse items-center gap-12 md:gap-24 p-6">
-      <div class="relative w-full max-w-[400px]">
-        <div class="absolute -bottom-6 -left-12 bg-gradient-to-r from-purple-900 to-purple-700 opacity-30 rounded-lg w-50 h-50"></div>
-        <img src="assets/img/mask-group-4.png" alt="Main Image" class="w-full h-64 object-cover relative z-10 rounded-lg">
+      <div class="relative w-full">
+        <div class="absolute -bottom-6 -left-12 opacity-30 rounded-[30px] w-50 h-50 lg:w-[300px] lg:h-[250px]" style=" background-image: linear-gradient(113deg, #590474 4%, #30057e 83%);"></div>
+        <img src="assets/img/mask-group-4.png" alt="Main Image" class="w-full h-64 lg:w-[600px] lg:h-[350px] object-cover relative z-10 rounded-[30px]">
       </div>
-      <div class="flex flex-col max-w-lg space-y-6">
+      <!-- max-w-lg -->
+      <div class="flex flex-col space-y-6">
         <img src="assets/img/group-15.png" alt="Group 15" class="w-20 h-20 mx-auto md:mx-0">
-        <h3 class="text-2xl md:text-3xl font-bold text-white">
+        <h3 class="text-2xl md:text-3xl lg:text-[40px] font-bold text-white">
           Expertise Across Channels
         </h3>
-        <p class="text-lg text-white">
+        <p class="text-lg text-white lg:text-[25px] font-light">
           From SEO to Google Ads, Social Media Marketing to Content Creation, we provide end-to-end solutions that fuel business growth.
         </p>
         <div class="flex items-center justify-center md:justify-start gap-3 pt-2">
           <img src="assets/img/path-15.png" alt="Path 15" class="w-6">
-          <a href="#" class="text-lg text-white hover:text-purple-300 transition-colors">Learn More</a>
+          <a href="#" class="text-lg text-white hover:text-purple-300 transition-colors font-light lg:text-[25px]">Learn More</a>
         </div>
       </div>
     </div>
   </div>
 </div>
-<div class="max-w-72xl mx-auto my-20 px-6 py-16 rounded-[50px] lg:rounded-[197px] bg-gradient-to-t from-black/40 via-[#570471]/40 to-[#570471]/40">
-  <div class="flex flex-wrap items-center">
+<div class="mx-auto my-20 px-16 py-16 rounded-[50px] lg:rounded-[197px] bg-gradient-to-t from-black/40 via-[#570471]/40 to-[#570471]/40">
+  <div class="flex flex-wrap items-center my-15">
     <div class="w-full lg:w-auto flex justify-center lg:justify-center">
       <img 
         src="assets/img/cyberpunk-illustration-with-neon-colors-futuristic-technology.png" 
         alt="Cyberpunk illustration"
-        class="w-[300px] md:w-[400px] lg:w-[474px] h-auto object-cover rounded-[50px] lg:rounded-[100px] transform translate-z-0 will-change-transform"
+        class="w-[300px] md:w-[400px] lg:w-[574px] lg:h-[500px] h-auto object-cover rounded-[50px] lg:rounded-[100px] transform translate-z-0 will-change-transform"
       />
     </div>
-    <div class="w-full lg:flex-1 flex flex-col justify-center mt-8 lg:mt-0 lg:ml-12 text-center lg:text-left">
-      <h1 class="font-light text-[28px] md:text-[36px] lg:text-[40px] leading-[1.2] text-[#e5d3ff]">
+    <div class="w-full lg:flex-1 flex flex-col mt-8 lg:mt-0 lg:ml-24 lg:text-left">
+      <h1 class="font-light text-[28px] md:text-[36px] lg:text-[50px] leading-[1.2] text-[#e5d3ff]">
         Strategic Planning for<br class="hidden md:block">
         Long-Term Growth
       </h1>
-      <p class="font-light text-[16px] md:text-[18px] lg:text-[20px] leading-[1.33] text-white mt-4 max-w-2xl mx-auto lg:mx-0">
+      <p class="font-light text-[16px] md:text-[18px] lg:text-[30px] leading-[1.33] text-white mt-4 mx-auto lg:mx-0">
         At Vogue Consulting Marketing Hub, we don't just focus on immediate wins. We combine data analytics and market insights to design strategies that foster sustainable growth. By understanding your business's long-term goals, we create a roadmap that positions you for ongoing success.
       </p>
     </div>
@@ -401,10 +411,10 @@
 </div>
 <section class="px-4">
   <div class="ml-12">
-    <h2 class="text-2xl text-[40px] text-purple-300 mb-4">
+    <h2 class="text-2xl text-[40px] font-light text-[#e5d3ff] mb-4">
       Ready to Scale Your Business?
     </h2>
-    <p class="text-base lg:text-lg text-gray-200 mb-8">
+    <p class="lg:text-[23px] text-gray-200 mb-8 text-light">
       If you’re looking to partner with a marketing agency that prioritizes your
       business’s growth through data-driven insights and a
       <br class="hidden md:block">
@@ -417,15 +427,16 @@
       <!-- Service Dropdown -->
       <div class="form-group mb-6">
         <label for="service" class="block text-2xl font-light mb-2">How can We Help?</label>
-        <div class="service-dropdown relative bg-purple-900 rounded-lg" 
-             style="width: 100%; max-width: 400px;">
+        <div class="service-dropdown relative rounded-lg" 
+             style="width: 100%; max-width: 500px; height: 80px; background-color:#30057e;">
           <select
             id="service"
             name="service"
-            class="w-full h-[50px] bg-transparent border-none text-white text-lg px-4 outline-none appearance-none"
+            class="w-full h-[50px] bg-transparent border-none text-white text-lg px-8 mt-3 outline-none appearance-none"
+            style="font-size: 1.5rem; "
             [(ngModel)]="selectedService"
             (change)="addService()">
-            <option class="text-gray-500" value="" disabled selected>Select Service</option>
+            <option class="text-gray-500 " value="" disabled selected>Select Service</option>
             <option class="text-gray-500" value="Social Media Marketing">Social Media Marketing</option>
             <option class="text-gray-500" value="Google Ads">Google Ads</option>
             <option class="text-gray-500" value="Content Writing">Content Writing</option>
@@ -463,9 +474,10 @@
             type="text"
             id="name"
             name="name"
+            style="font-size: 1.5rem; "
             placeholder="Enter your full name"
             [(ngModel)]="formData.name"
-            class="w-full border border-gray-300 rounded-lg px-4 py-2 text-black focus:ring-2 focus:ring-purple-500 bg-white">
+            class="w-full lg:w-[600px] lg:h-[80px] border border-gray-300 rounded-lg px-4 py-2 text-black focus:ring-2 focus:ring-purple-500 bg-white">
         </div>
         <div class="input-wrapper flex-1">
           <label for="email" class="block text-lg lg:text-2xl font-light mb-2">Enter Email</label>
@@ -474,8 +486,9 @@
             id="email"
             name="email"
             placeholder="Enter your email"
+            style="font-size: 1.5rem; "
             [(ngModel)]="formData.email"
-            class="w-full border border-gray-300 rounded-lg px-4 py-2 text-black focus:ring-2 focus:ring-purple-500 bg-white">
+            class="w-full lg:w-[600px] lg:h-[80px] border border-gray-300 rounded-lg px-4 py-2 text-black focus:ring-2 focus:ring-purple-500 bg-white">
         </div>
       </div>
 
@@ -485,13 +498,14 @@
         <textarea
           id="message"
           name="message"
-          placeholder="What else can you share about the project"
+          placeholder="What else can you share about the project?"
+          style="font-size: 1.5rem; "
           [(ngModel)]="formData.message"
-          class="w-full h-40 border border-gray-300 rounded-lg px-4 py-2 text-black focus:ring-2 focus:ring-purple-500 resize-y bg-white"></textarea>
+          class="w-full h-40 lg:h-[300px] lg:w-[1320px] border border-gray-300 rounded-lg px-4 py-2 text-black focus:ring-2 focus:ring-purple-500 resize-y bg-white"></textarea>
       </div>
 
       <!-- Submit Button -->
-      <div class="submit-btn flex justify-center lg:justify-end">
+      <div class="submit-btn flex lg:ml-[995px]">
         <button
           type="submit"
           class="w-full lg:w-[300px] h-12 lg:h-14 bg-transparent border border-white rounded-full text-white text-lg lg:text-xl font-medium hover:bg-purple-700 hover:text-black transition">

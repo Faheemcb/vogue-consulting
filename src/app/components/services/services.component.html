@@ -2,7 +2,7 @@
 <app-navbar></app-navbar>
 <!-- [500px] h-[402px] -->
 <main>
-    <section class="container mx-auto px-4 py-12">
+    <section class="container px-4 py-12">
         <div class="flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:space-x-8">
           <!-- Image Section -->
           <div class="w-full lg:w-1/2 flex justify-center">
@@ -16,19 +16,21 @@
           <!-- Text Section -->
           <div class="w-full lg:w-1/2 text-center lg:text-left">
             <h1
-              class="text-[24px] lg:text-[44px]  mb-4 text-5xl font-light leading-tight"
+              class="text-[24px] lg:text-[45px]  mb-4 text-5xl font-light lg:leading-14"
               [ngStyle]="{ color: '#e5d3ff' }"
             >
               Comprehensive Marketing Services Tailored for Growth
             </h1>
-            <p class="text-gray-300 mb-4 text-[16px] sm:text-[16px] lg:text-[20px] font-light leading-relaxed">
+            <p class="text-gray-300 mb-4 text-[16px] sm:text-[16px] lg:text-[25px] font-light leading-relaxed">
               At Vogue Consulting Marketing Hub, we offer a wide range of performance-optimized marketing services designed
               to help businesses grow and scale. We craft custom strategies based on your business's unique goals and needs.
             </p>
-            <p class="text-gray-300 text-[16px] sm:text-[16px] lg:text-[20px] font-light leading-relaxed">
+            <p class="text-gray-300 text-[16px] sm:text-[16px] lg:text-[25px] font-light leading-relaxed">
               Our services are driven by deep market analysis, competitor research, and a thorough understanding of your industry.
             </p>
           </div>
+          <div class="absolute right-0 top-[75%] sm:w-[200px] h-[150px] lg:h-[400px] sm:h-[150px] bg-gradient-to-r from-[#570471] to-[#9905c2] opacity-40 blur-[100px]"></div>
+
         </div>
       
         <!-- Expertise Section -->
@@ -39,15 +41,15 @@
           Our Expertise
         </h2>
         <p
-          class="text-[16px] sm:text-[18px] lg:text-[20px] mt-4 text-white text-center font-light leading-normal mx-auto max-w-screen-md"
+          class="text-[16px] sm:text-[18px] lg:text-[25px] mt-4 text-white text-center font-light leading-normal"
         >
-          With 10 years of experience in digital marketing, our team has honed its craft in understanding markets, analyzing
+          With 10 years of experience in digital marketing, our team has honed its craft in understanding markets, analyzing <br>
           competitors, and formulating strategies that generate consistent, high-quality leads and revenue growth. Our unique approach combines:
         </p>
       </section>
       <section class="container mx-auto px-4 py-8">
         <div class="grid md:grid-cols-2 items-center gap-8 mb-16">
-          <div class="order-2 md:order-1 px-4 ml-20">
+          <div class="order-2 md:order-1 px-4 lg:ml-20">
             <h1 class="text-[24px] lg:text-[30px] mb-4 text-white font-bold">
               Boost Your Online Presence
             </h1>
@@ -153,7 +155,7 @@
         </div>
       
         <div class="grid md:grid-cols-2 items-center gap-8 mb-16 relative">
-          <div class="px-4 z-10 ml-20">
+          <div class="px-4 z-10 lg:ml-20">
             <h1 class="text-[24px] lg:text-[30px] mb-4 text-white font-bold">
               Google Ads – Maximize Your Ad Spend
             </h1>
@@ -190,11 +192,11 @@
             </ul>
           </div>
       
-          <div class="relative flex justify-center">
+          <div class="order-1 md:order-2 flex justify-center">
             <img
-              src="assets/img/mask-group-8.png"
+              src="assets/img/mask-group-9.png"
               alt="Marketing Services Illustration"
-              class="w-full max-w-[500px] h-auto object-cover rounded-[57px] relative z-10"
+              class="w-full max-w-[500px] h-auto object-cover rounded-[57px] relative z-100"
             />
             <div
               class="absolute -bottom-10 right-0 w-[150px] h-[300px] rounded-full opacity-50 blur-[30px]"
