@@ -1,74 +1,58 @@
 <app-offer></app-offer>
 <app-navbar></app-navbar>
 <main>
-  <section class="mt-24 px-4">
-    <h1 class="text-center text-2xl md:text-4xl font-light" style="color: #e5d3ff;">
-      Let’s Grow Your Business Together
+  <section class="mt-8 sm:mt-16 md:mt-24 px-4">
+    <h1 class="text-center text-xl sm:text-2xl md:text-4xl font-light" style="color: #e5d3ff;">
+      Let's Grow Your Business Together
     </h1>
-    <p class="text-center mt-4 text-base md:text-2xl font-light">
-      Whether you’re interested in SEO, social media marketing, or a full-scale marketing strategy,
-      <br class="hidden md:block">
-      Vogue Consulting Marketing Hub is here to help. We’re ready to listen, analyze, and design a
-      <br class="hidden md:block">
+    <p class="text-center mt-3 sm:mt-4 text-sm sm:text-base md:text-2xl font-light px-2 sm:px-4">
+      Whether you're interested in SEO, social media marketing, or a full-scale marketing strategy,
+      Vogue Consulting Marketing Hub is here to help. We're ready to listen, analyze, and design a
       custom solution for your business.
     </p>
   </section>
 
-  <div class="relative w-full px-4">
+  <div class="relative w-full px-2 sm:px-4">
     <!-- Left Background - Down -->
     <div
-      class="absolute -left-20 -top-20 bottom-0 transform -translate-x-1/2 translate-y-1/2 z-0 hidden lg:block"
-      [ngStyle]="{
-        'width.px': 362,
-        'height.px': 300,
-        'opacity': 0.47,
-        'filter': 'blur(43.4px)',
-        'background': 'linear-gradient(148deg, #fff -1%, #000 -1%, #570471 68%, #00058d 99%)'
-      }">
+      class="absolute -left-12 sm:-left-20 -top-12 sm:-top-20 bottom-0 transform -translate-x-1/2 translate-y-1/2 z-0 hidden md:block"
+      style="width: 362px; height: 300px; opacity: 0.47; filter: blur(43.4px); background: linear-gradient(148deg, #fff -1%, #000 -1%, #570471 68%, #00058d 99%)">
     </div>
 
     <!-- Right Background - Up -->
     <div
-      class="absolute -right-20 -top-16 z-0 hidden lg:block"
-      [ngStyle]="{
-        'width.px': 300,
-        'height.px': 300,
-        'opacity': 0.47,
-        'filter': 'blur(43.4px)',
-        'background': 'linear-gradient(148deg, #fff -1%, #000 -1%, #570471 68%, #00058d 99%)',
-        'right': '13px'
-      }">
+      class="absolute -right-12 sm:-right-20 -top-12 sm:-top-16 z-0 hidden md:block"
+      style="width: 300px; height: 300px; opacity: 0.47; filter: blur(43.4px); background: linear-gradient(148deg, #fff -1%, #000 -1%, #570471 68%, #00058d 99%); right: 13px">
     </div>
 
     <!-- Contact Section -->
-    <section class="mt-12 px-4 rounded-4xl relative z-10">
-      <div class="flex flex-col lg:flex-row items-center text-white p-6 lg:p-12 rounded-lg" style="background-color: #0f0f0f;">
+    <section class="mt-8 sm:mt-12 px-2 sm:px-4 rounded-xl sm:rounded-4xl relative z-10">
+      <div class="flex flex-col lg:flex-row items-center text-white p-4 sm:p-6 lg:p-12 rounded-lg" style="background-color: #0f0f0f;">
         <!-- Left Section -->
-        <div class="flex flex-col space-y-4 w-full lg:w-1/2 lg:pr-8 mb-8 lg:mb-0">
-          <p class="text-lg lg:text-[30px] text-center lg:text-left" style="color: #7c7c7c;">info&#64;vogueconsulting.co.uk</p>
-          <div class="flex flex-col lg:flex-row items-center justify-center lg:justify-start space-y-3 lg:space-y-0 lg:space-x-4">
-            <img src="assets/img/group-48.png" alt="Contact" class="w-12 h-12" />
-            <div class="text-center lg:text-left">
-              <p>+44 1234 567890</p>
-              <p>London, UK</p>
+        <div class="flex flex-col gap-y-3 sm:gap-y-4 w-full lg:w-1/2 lg:pr-8 mb-6 lg:mb-0">
+          <p class="text-base sm:text-lg lg:text-[30px] text-center lg:text-left" style="color: #7c7c7c;">info&#64;vogueconsulting.co.uk</p>
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-y-2 sm:gap-y-0 sm:gap-x-4">
+            <img src="assets/img/group-48.png" alt="Contact" class="w-8 sm:w-10 lg:w-12 h-8 sm:h-10 lg:h-12" />
+            <div class="text-center sm:text-left">
+              <p class="text-sm sm:text-base">+44 1234 567890</p>
+              <p class="text-sm sm:text-base">London, UK</p>
             </div>
           </div>
         </div>
     
-        <div class="h-px lg:h-40 w-full lg:w-px border-t lg:border-l border-white my-6 lg:my-0 lg:mx-8"></div>
+        <div class="h-px lg:h-40 w-full lg:w-px border-t lg:border-l border-white my-4 sm:my-6 lg:my-0 lg:mx-8"></div>
     
         <!-- Right Section -->
-        <div class="flex flex-col space-y-4 w-full lg:w-1/2 lg:pl-8">
-          <p class="text-lg lg:text-2xl font-semibold text-center lg:text-left">Connect with us</p>
-          <p class="font-light text-center lg:text-left">
+        <div class="flex flex-col gap-y-3 sm:gap-y-4 w-full lg:w-1/2 lg:pl-8">
+          <p class="text-base sm:text-lg lg:text-2xl font-semibold text-center lg:text-left">Connect with us</p>
+          <p class="text-sm sm:text-base font-light text-center lg:text-left">
             Follow us on social media to stay updated with our
-            <br class="hidden md:block" />
             latest projects, tips, and insights.
           </p>
-          <div class="flex justify-center lg:justify-start space-x-4">
-            <img src="assets/img/facebook-4.png" alt="Facebook" class="w-8 h-8" />
-            <img src="assets/img/twitter-1.png" alt="Twitter" class="w-8 h-8" />
-            <img src="assets/img/linkedin-1.png" alt="LinkedIn" class="w-8 h-8" />
+          <div class="flex justify-center lg:justify-start gap-x-4">
+            <img src="assets/img/facebook-4.png" alt="Facebook" class="w-6 sm:w-8 h-6 sm:h-8" />
+            <img src="assets/img/twitter-1.png" alt="Twitter" class="w-6 sm:w-8 h-6 sm:h-8" />
+            <img src="assets/img/linkedin-1.png" alt="LinkedIn" class="w-6 sm:w-8 h-6 sm:h-8" />
           </div>
         </div>
       </div>
@@ -76,50 +60,49 @@
   </div>
 
   <div *ngIf="submissionSuccess" 
-       class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-2xl"
+       class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl"
        @toastAnimation>
-    <div class="bg-gray-950 text-white px-8 py-4 rounded-lg shadow-lg flex items-center gap-3 mx-4">
+    <div class="bg-gray-950 text-white px-4 sm:px-8 py-3 sm:py-4 rounded-lg shadow-lg flex items-center gap-2 sm:gap-3 mx-2 sm:mx-4">
       <div class="flex-shrink-0">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
         </svg>
       </div>
       <div class="flex-grow">
-        <p class="text-sm opacity-90">Thank you for your submission. We'll get back to you soon.</p>
+        <p class="text-xs sm:text-sm opacity-90">Thank you for your submission. We'll get back to you soon.</p>
       </div>
       <button 
         (click)="dismissToast()" 
         class="flex-shrink-0 text-white/80 hover:text-white">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
     </div>
   </div>
 
-  <section class="px-4 mt-24">
-    <!-- <div class="ml-20"> -->
-      <h2 class="text-2xl lg:text-[40px] mb-4 ml-8 font-light " style="color: #e5d3ff;">
+  <section class="px-2 sm:px-4 mt-12 sm:mt-16 md:mt-24">
+    <div class="mx-2 sm:mx-4 md:ml-8">
+      <h2 class="text-xl sm:text-2xl lg:text-[40px] mb-3 sm:mb-4 font-light" style="color: #e5d3ff;">
         Ready to Scale Your Business?
       </h2>
-      <p class="text-base lg:text-[23px] text-gray-200 mb-8 ml-8">
-        If you’re looking to partner with a marketing agency that prioritizes your
-        business’s growth through data-driven insights and a
-        <br class="hidden md:block">
+      <p class="text-sm sm:text-base lg:text-[23px] text-gray-200 mb-6 sm:mb-8">
+        If you're looking to partner with a marketing agency that prioritizes your
+        business's growth through data-driven insights and a
         performance-optimized approach, get in touch with us today.
       </p>
-    <!-- </div> -->
+    </div>
 
-    <div class="p-6 lg:p-10 rounded-lg shadow-lg text-white">
+    <div class="p-4 sm:p-6 lg:p-10 rounded-lg shadow-lg text-white">
       <form (ngSubmit)="onSubmit()">
         <!-- Service Dropdown -->
-        <div class="form-group mb-6">
-          <label for="service" class="block text-2xl font-light mb-2">How can We Help?</label>
+        <div class="form-group mb-4 sm:mb-6">
+          <label for="service" class="block text-lg sm:text-xl lg:text-2xl font-light mb-2">How can We Help?</label>
           <div class="service-dropdown relative bg-purple-900 rounded-lg" style="width: 100%; max-width: 400px;">
             <select
               id="service"
               name="service"
-              class="w-full h-[50px] bg-transparent border-none text-white text-lg px-4 pr-10 outline-none appearance-none"
+              class="w-full h-10 sm:h-[50px] bg-transparent border-none text-white text-base sm:text-lg px-4 pr-10 outline-none appearance-none"
               [(ngModel)]="selectedService"
               (focus)="isDropdownOpen = true"
               (blur)="isDropdownOpen = false"
@@ -139,10 +122,10 @@
         </div>
 
         <!-- Selected Services -->
-        <div class="selected-services flex flex-wrap gap-3">
+        <div class="selected-services flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6">
           <span
             *ngFor="let service of selectedServices"
-            class="bg-purple-900 text-white text-sm px-3 py-1 rounded-full shadow-md flex items-center gap-2">
+            class="bg-purple-900 text-white text-xs sm:text-sm px-2 sm:px-3 py-1 rounded-full shadow-md flex items-center gap-1 sm:gap-2">
             {{ service }}
             <button
               type="button"
@@ -154,9 +137,9 @@
         </div>
 
         <!-- Name and Email -->
-        <div class="form-group flex flex-col lg:flex-row gap-5 mb-6">
+        <div class="form-group flex flex-col lg:flex-row gap-4 sm:gap-5 mb-4 sm:mb-6">
           <div class="input-wrapper flex-1">
-            <label for="name" class="block text-lg lg:text-2xl font-light mb-2">Full Name</label>
+            <label for="name" class="block text-base sm:text-lg lg:text-2xl font-light mb-2">Full Name</label>
             <input
               type="text"
               id="name"
@@ -164,10 +147,10 @@
               [(ngModel)]="formData.name"
               name="name"
               placeholder="Enter your full name"
-              class="w-full border border-gray-300 rounded-lg px-4 py-2 text-black focus:ring-2 focus:ring-purple-500 bg-white">
+              class="w-full border border-gray-300 rounded-lg px-3 sm:px-4 py-2 text-black text-sm sm:text-base focus:ring-2 focus:ring-purple-500 bg-white">
           </div>
           <div class="input-wrapper flex-1">
-            <label for="email" class="block text-lg lg:text-2xl font-light mb-2">Enter Email</label>
+            <label for="email" class="block text-base sm:text-lg lg:text-2xl font-light mb-2">Enter Email</label>
             <input
               type="email"
               id="email"
@@ -175,26 +158,26 @@
               name="email"
               [(ngModel)]="formData.email"
               placeholder="Enter your email"
-              class="w-full border border-gray-300 rounded-lg px-4 py-2 text-black focus:ring-2 focus:ring-purple-500 bg-white">
+              class="w-full border border-gray-300 rounded-lg px-3 sm:px-4 py-2 text-black text-sm sm:text-base focus:ring-2 focus:ring-purple-500 bg-white">
           </div>
         </div>
 
         <!-- Message -->
-        <div class="form-group mb-6">
-          <label for="message" class="block text-lg lg:text-2xl font-light mb-2">Message</label>
+        <div class="form-group mb-4 sm:mb-6">
+          <label for="message" class="block text-base sm:text-lg lg:text-2xl font-light mb-2">Message</label>
           <textarea
             id="message"
             name="message"
             [(ngModel)]="formData.message"
             placeholder="What else can you share about the project"
-            class="w-full h-40 border border-gray-300 rounded-lg px-4 py-2 text-black focus:ring-2 focus:ring-purple-500 resize-y bg-white"></textarea>
+            class="w-full h-32 sm:h-40 border border-gray-300 rounded-lg px-3 sm:px-4 py-2 text-black text-sm sm:text-base focus:ring-2 focus:ring-purple-500 resize-y bg-white"></textarea>
         </div>
 
         <!-- Submit Button -->
-        <div class="submit-btn flex justify-center lg:ml-[995px]">
+        <div class="submit-btn flex justify-center lg:justify-end">
           <button
             type="submit"
-            class="w-full lg:w-[300px] h-12 lg:h-14 bg-transparent border border-white rounded-full text-white text-lg lg:text-xl font-medium hover:bg-purple-700 hover:text-black transition cursor-pointer">
+            class="w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-3 lg:w-[250px] lg:h-14 bg-transparent border border-white rounded-full text-white text-base sm:text-lg lg:text-xl font-medium hover:bg-purple-700 hover:text-black transition cursor-pointer">
             Submit
           </button>
         </div>

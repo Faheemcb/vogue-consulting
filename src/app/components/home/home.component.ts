@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ContactFormService } from '../../shared/services/contact-form.service';
+import { LeadFormService } from '../../shared/services/lead-form.service';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,7 @@ export class HomeComponent {
   selectedService: string = '';
   selectedServices: string[] = [];
   isMobileMenuOpen = false;
+  submissionSuccess = false;
 
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
@@ -26,7 +28,7 @@ export class HomeComponent {
     message: ''
   };
 
-  constructor( private contactFormService: ContactFormService) {}
+  constructor( private contactFormService: ContactFormService, private LeadFormService: LeadFormService) {}
 
   // Add a service to the list
   addService() {
@@ -45,13 +47,29 @@ export class HomeComponent {
 
   // Submit the form
   onSubmit() {
-    // this.appwriteService.saveFormData(this.formData)
-    //   .then(() => {
-    //     this.resetForm();
-    //   })
-    //   .catch((error) => {
-    //     console.error('Error submitting form: ', error);
-    //   });
+    const dataToSend = {
+      ...this.formData,
+      service: this.selectedServices
+    };
+
+    this.LeadFormService.submitForm(dataToSend).subscribe({
+      next: (response) => {
+        console.log('Response:', response);
+        this.submissionSuccess = true;
+        this.formData = {
+          name: '',
+          email: '',
+          services: [],
+          message: ''
+        }
+        this.selectedServices = [];
+        this.selectedService = '';
+        // setTimeout(() => this.closeModal(), 2000);
+      },
+      error: (error) => {
+        console.error('Error submitting form:', error);
+      }
+    });
   }
 
   // Reset the form
@@ -68,5 +86,10 @@ export class HomeComponent {
 
   openContactForm() {
     this.contactFormService.open();
+  }
+
+  dismissToast(): void {
+    this.submissionSuccess = false;
+  
   }
 }
