@@ -2,36 +2,61 @@
 <app-navbar></app-navbar>
 <!-- [500px] h-[402px] -->
 <main>
-  <section class="container mx-auto px-4 py-8 md:py-12">
-    <div class="flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:space-x-8">
+  <div class="relative">
+    <div 
+      class="absolute hidden md:block w-[60px] h-[200px] left-0 top-16 rounded-br-[35px] rounded-tr-[35px] cursor-pointer z-[999]" 
+      [style]="getButtonStyle()"
+      (click)="openContactForm()"
+      (mouseenter)="isHovered = true"
+      (mouseleave)="isHovered = false">
+      <span 
+        class="text-white text-[18px] font-medium"
+        [style]="getTextStyle()">
+        Get in Touch
+      </span> 
+    </div>
+  </div>
+  <section class="container max-w-7xl mx-auto px-4 py-8 md:py-12">
+    <div
+      class="flex flex-col lg:flex-row items-center space-x-20"
+    >
       <!-- Image Section -->
       <div class="w-full lg:w-1/2 flex justify-center">
         <img
           src="assets/img/cyberpunk-illustration-with-neon-colors-futuristic-technology-1.png"
           alt="Marketing Services Illustration"
-          class="w-full max-w-sm lg:max-w-lg h-auto object-cover rounded-[20px] sm:rounded-[30px] lg:rounded-[57px]"
+          class="w-full h-auto object-cover rounded-[20px] sm:rounded-[30px] lg:rounded-[57px]"
         />
       </div>
-  
+
       <!-- Text Section -->
       <div class="w-full lg:w-1/2 text-center lg:text-left px-4">
         <h1
-          class="text-[24px] md:text-[28px] lg:text-[45px] mb-4 font-light lg:leading-tight"
+          class="text-[24px] md:text-[28px] lg:text-[40px] mb-4 font-light"
           [ngStyle]="{ color: '#e5d3ff' }"
         >
           Comprehensive Marketing Services Tailored for Growth
         </h1>
-        <p class="text-gray-300 mb-4 text-[16px] sm:text-[16px] md:text-[18px] lg:text-[25px] font-light leading-relaxed">
-          At Vogue Consulting Marketing Hub, we offer a wide range of performance-optimized marketing services designed
-          to help businesses grow and scale. We craft custom strategies based on your business's unique goals and needs.
+        <p
+          class="text-gray-300 mb-4 text-[16px] sm:text-[16px] md:text-[18px] lg:text-[25px] font-light"
+        >
+          At Vogue Consulting Marketing Hub, we offer a wide range of
+          performance-optimized marketing services designed to help businesses
+          grow and scale. We craft custom strategies based on your business's
+          unique goals and needs.
         </p>
-        <p class="text-gray-300 text-[16px] sm:text-[16px] md:text-[18px] lg:text-[25px] font-light leading-relaxed">
-          Our services are driven by deep market analysis, competitor research, and a thorough understanding of your industry.
+        <p
+          class="text-gray-300 text-[16px] sm:text-[16px] md:text-[18px] lg:text-[25px] font-light"
+        >
+          Our services are driven by deep market analysis, competitor research,
+          and a thorough understanding of your industry.
         </p>
       </div>
-      <div class="absolute right-0 top-[75%] sm:w-[200px] h-[150px] lg:h-[400px] sm:h-[150px] bg-gradient-to-r from-[#570471] to-[#9905c2] opacity-40 blur-[100px]"></div>
+      <div
+        class="absolute right-0 top-[75%] sm:w-[200px] h-[150px] lg:h-[400px] sm:h-[150px] bg-gradient-to-r from-[#570471] to-[#9905c2] opacity-40 blur-[100px]"
+      ></div>
     </div>
-  
+
     <!-- Expertise Section -->
     <div class="mt-12 md:mt-16 px-4">
       <h2
@@ -41,26 +66,32 @@
         Our Expertise
       </h2>
       <p
-        class="text-[16px] sm:text-[18px] lg:text-[23px] mt-4 text-white text-center font-light leading-normal max-w-4xl mx-auto"
+        class="text-[16px] sm:text-[18px] lg:text-[23px] mt-4 text-white text-center font-light leading-normal max-w-7xl mx-auto"
       >
-        With 10 years of experience in digital marketing, our team has honed its craft in understanding markets, analyzing 
-        competitors, and formulating strategies that generate consistent, high-quality leads and revenue growth. Our unique approach combines:
+        With 10 years of experience in digital marketing, our team has honed its
+        craft in understanding markets, analyzing competitors, and formulating
+        strategies that generate consistent, high-quality leads and revenue
+        growth. <br> Our unique approach combines:
       </p>
     </div>
   </section>
 
-  <section class="container mx-auto px-4 py-8">
+  <section class="container max-w-7xl mx-auto">
     <div class="grid md:grid-cols-2 items-center gap-8 mb-16">
       <div class="order-2 md:order-1 px-4 md:px-8 lg:px-12">
-        <h1 class="text-[24px] md:text-[28px] lg:text-[30px] mb-4 text-white font-bold">
+        <h1
+          class="text-[24px] md:text-[28px] lg:text-[30px] mb-4 text-white font-bold"
+        >
           Boost Your Online Presence
         </h1>
-  
-        <p class="text-gray-300 mb-4 text-[18px] md:text-[20px] font-light leading-relaxed">
+
+        <p
+          class="text-gray-300 mb-4 text-[18px] md:text-[20px] font-light leading-relaxed"
+        >
           SEO is the cornerstone of any successful digital strategy. Our
           data-driven SEO services focus on:
         </p>
-  
+
         <ul class="space-y-4 text-gray-300 text-[16px] md:text-[18px]">
           <li class="flex items-start">
             <img
@@ -81,7 +112,8 @@
             />
             <span>
               <strong>On-Page Optimization:</strong> Our technical SEO experts
-              ensure your website is optimized for both search engines and users.
+              ensure your website is optimized for both search engines and
+              users.
             </span>
           </li>
           <li class="flex items-start">
@@ -97,37 +129,39 @@
           </li>
         </ul>
       </div>
-  
+
       <div class="order-1 md:order-2 flex justify-center">
         <img
           src="assets/img/mask-group-7.png"
           alt="Marketing Services Illustration"
-          class="w-full max-w-[500px] h-auto object-cover rounded-[20px] sm:rounded-[30px] lg:rounded-[57px]"
+          class="w-full h-auto object-cover rounded-[20px] sm:rounded-[30px] lg:rounded-[57px]"
         />
       </div>
     </div>
-  
+
     <div class="grid md:grid-cols-2 items-center gap-8 mb-16">
       <div class="flex justify-center">
         <img
           src="assets/img/mask-group-8.png"
           alt="Marketing Services Illustration"
-          class="w-full max-w-[500px] h-auto object-cover rounded-[20px] sm:rounded-[30px] lg:rounded-[57px]"
+          class="w-full h-auto object-cover rounded-[20px] sm:rounded-[30px] lg:rounded-[57px]"
         />
       </div>
-  
+
       <div class="px-4 md:px-8 lg:px-12">
-        <h1 class="text-[24px] md:text-[28px] lg:text-[30px] mb-4 text-white font-bold">
+        <h1
+          class="text-[24px] md:text-[28px] lg:text-[30px] mb-4 text-white font-bold"
+        >
           Social Media Marketing – Engage and Convert
         </h1>
-  
+
         <p class="text-gray-300 mb-4 text-[18px] md:text-[20px] font-light">
           With billions of users on platforms like Facebook, Instagram, and
           LinkedIn, social media offers a massive opportunity for businesses to
           connect with their audience. Our social media marketing services
           include:
         </p>
-  
+
         <ul class="space-y-4 text-gray-300 text-[16px] md:text-[18px]">
           <li class="flex items-start">
             <img
@@ -155,18 +189,20 @@
         </ul>
       </div>
     </div>
-  
+
     <div class="grid md:grid-cols-2 items-center gap-8 mb-16 relative">
       <div class="order-2 md:order-1 px-4 md:px-8 lg:px-12 z-10">
-        <h1 class="text-[24px] md:text-[28px] lg:text-[30px] mb-4 text-white font-bold">
+        <h1
+          class="text-[24px] md:text-[28px] lg:text-[30px] mb-4 text-white font-bold"
+        >
           Google Ads – Maximize Your Ad Spend
         </h1>
-  
+
         <p class="text-gray-300 mb-4 text-[18px] md:text-[20px] font-light">
           Google Ads is one of the most effective ways to drive traffic and
           generate leads. Our Google Ads services focus on:
         </p>
-  
+
         <ul class="space-y-4 text-gray-300 text-[16px] md:text-[18px]">
           <li class="flex items-start">
             <img
@@ -193,45 +229,43 @@
           </li>
         </ul>
       </div>
-  
+
       <div class="order-1 md:order-2 flex justify-center">
         <img
           src="assets/img/mask-group-9.png"
           alt="Marketing Services Illustration"
-          class="w-full max-w-[500px] h-auto object-cover rounded-[20px] sm:rounded-[30px] lg:rounded-[57px] relative z-10"
+          class="w-full h-auto object-cover rounded-[20px] sm:rounded-[30px] lg:rounded-[57px] relative z-10"
         />
         <div
-          class="absolute -bottom-10 right-0 w-[150px] h-[300px] rounded-full opacity-50 blur-[30px]"
+          class="absolute -bottom-10 right-[-10%] w-[350px] h-[300px] rounded-full opacity-50 blur-[30px]"
           style="
-            background-image: linear-gradient(
-              148deg,
-              #570471 68%,
-              #00058d 99%
-            );
+            background-image: linear-gradient(148deg, #570471 68%, #00058d 99%);
           "
         ></div>
       </div>
     </div>
-  
+
     <div class="grid md:grid-cols-2 items-center gap-8 mb-16">
       <div class="flex justify-center">
         <img
           src="assets/img/mask-group-10.png"
           alt="Marketing Services Illustration"
-          class="w-full max-w-[500px] h-auto object-cover rounded-[20px] sm:rounded-[30px] lg:rounded-[57px]"
+          class="w-full h-auto object-cover rounded-[20px] sm:rounded-[30px] lg:rounded-[57px]"
         />
       </div>
-  
+
       <div class="px-4 md:px-8 lg:px-12">
-        <h1 class="text-[24px] md:text-[28px] lg:text-[30px] mb-4 text-white font-bold">
+        <h1
+          class="text-[24px] md:text-[28px] lg:text-[30px] mb-4 text-white font-bold"
+        >
           Content Writing – Crafting Messages That Convert
         </h1>
-  
+
         <p class="text-gray-300 mb-4 text-[18px] md:text-[20px] font-light">
           High-quality content is essential to any marketing strategy. Our
           content writing services include:
         </p>
-  
+
         <ul class="space-y-4 text-gray-300 text-[16px] md:text-[18px]">
           <li class="flex items-start">
             <img
@@ -259,9 +293,10 @@
         </ul>
       </div>
     </div>
-  
+  </section>
+  <section>
     <div
-      class="w-full max-w-[1500px] mx-auto mt-16 sm:mt-24 lg:mt-[183px] px-4 sm:px-8 md:px-16 lg:px-[139.5px] py-16 sm:py-24 lg:py-[150px] rounded-t-[50px] sm:rounded-t-[100px] lg:rounded-t-[197px] rounded-b-[30px] lg:rounded-b-[50px]"
+      class="w-full mx-auto mt-16 sm:mt-24 lg:mt-[183px] px-4 sm:px-8 md:px-16 lg:px-[139.5px] py-16 sm:py-24 lg:py-[150px] rounded-t-[50px] sm:rounded-t-[100px] lg:rounded-t-[197px] rounded-b-[30px] lg:rounded-b-[50px]"
       style="
         background-image: linear-gradient(
           to top,
@@ -273,11 +308,13 @@
       "
     >
       <div class="flex flex-col items-center justify-center h-full">
-        <p class="text-center text-[18px] sm:text-[20px] lg:text-[24px] mb-6 text-white font-light leading-relaxed max-w-3xl">
+        <p
+          class="text-center text-[18px] sm:text-[20px] lg:text-[24px] mb-6 text-white font-light leading-relaxed max-w-3xl"
+        >
           Get in touch to learn how we can help you with a customized strategy
         </p>
         <button
-          class="rounded-[50px] text-white border border-white px-6 py-3 cursor-pointer hover:bg-gray-200 text-base sm:text-lg lg:text-[20px] hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 hover:border-transparent hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50 font-light transition-all duration-300" 
+          class="rounded-[50px] text-white border border-white px-6 py-3 cursor-pointer hover:bg-gray-200 text-base sm:text-lg lg:text-[20px] hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 hover:border-transparent hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50 font-light transition-all duration-300"
           (click)="openContactForm()"
         >
           Get in Touch

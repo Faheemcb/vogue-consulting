@@ -5,12 +5,16 @@
 /tmp
 /out-tsc
 /bazel-out
+.htaccess
+
 
 # Node
 /node_modules
 npm-debug.log
 yarn-error.log
 environments
+build
+build/
 
 # IDEs and editors
 .idea/
@@ -41,3 +45,4 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+

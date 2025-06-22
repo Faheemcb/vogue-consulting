@@ -1,7 +1,21 @@
 <app-offer></app-offer>
 <app-navbar></app-navbar>
 <main>
-  <section class="mt-8 sm:mt-16 md:mt-24 px-4">
+  <div class="relative">
+    <div 
+      class="absolute hidden md:block w-[60px] h-[200px] left-0 top-16 rounded-br-[35px] rounded-tr-[35px] cursor-pointer z-[999]" 
+      [style]="getButtonStyle()"
+      (click)="openContactForm()"
+      (mouseenter)="isHovered = true"
+      (mouseleave)="isHovered = false">
+      <span 
+        class="text-white text-[18px] font-medium"
+        [style]="getTextStyle()">
+        Get in Touch
+      </span> 
+    </div>
+  </div>
+  <section class="mt-8 sm:mt-16 md:mt-24 px-4 max-w-7xl mx-auto">
     <h1 class="text-center text-xl sm:text-2xl md:text-4xl font-light" style="color: #e5d3ff;">
       Let's Grow Your Business Together
     </h1>
@@ -26,17 +40,22 @@
     </div>
 
     <!-- Contact Section -->
-    <section class="mt-8 sm:mt-12 px-2 sm:px-4 rounded-xl sm:rounded-4xl relative z-10">
-      <div class="flex flex-col lg:flex-row items-center text-white p-4 sm:p-6 lg:p-12 rounded-lg" style="background-color: #0f0f0f;">
+    <section class="mt-8 sm:mt-12 px-2 sm:px-4 max-w-7xl mx-auto rounded-xl sm:rounded-4xl relative z-10">
+      <div class="flex flex-col lg:flex-row items-center text-white p-4 sm:p-6 lg:p-12 rounded-[30px]" style="background-color: #0f0f0f;">
         <!-- Left Section -->
         <div class="flex flex-col gap-y-3 sm:gap-y-4 w-full lg:w-1/2 lg:pr-8 mb-6 lg:mb-0">
           <p class="text-base sm:text-lg lg:text-[30px] text-center lg:text-left" style="color: #7c7c7c;">info&#64;vogueconsulting.co.uk</p>
           <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-y-2 sm:gap-y-0 sm:gap-x-4">
             <img src="assets/img/group-48.png" alt="Contact" class="w-8 sm:w-10 lg:w-12 h-8 sm:h-10 lg:h-12" />
             <div class="text-center sm:text-left">
-              <p class="text-sm sm:text-base">+44 1234 567890</p>
-              <p class="text-sm sm:text-base">London, UK</p>
+              <p class="text-sm sm:text-base">+44 7521748989</p>
             </div>
+          </div>
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-y-2 sm:gap-y-0 sm:gap-x-4">
+            <p class="text-center sm:text-left text-sm sm:text-base">
+              43 Lessington Avenue, RM7 9ED
+              <span class="block">United Kingdom</span>
+            </p>
           </div>
         </div>
     
@@ -81,7 +100,7 @@
     </div>
   </div>
 
-  <section class="px-2 sm:px-4 mt-12 sm:mt-16 md:mt-24">
+  <section class="px-2 sm:px-4 mt-12 sm:mt-16 md:mt-24 max-w-7xl mx-auto">
     <div class="mx-2 sm:mx-4 md:ml-8">
       <h2 class="text-xl sm:text-2xl lg:text-[40px] mb-3 sm:mb-4 font-light" style="color: #e5d3ff;">
         Ready to Scale Your Business?
@@ -94,38 +113,38 @@
     </div>
 
     <div class="p-4 sm:p-6 lg:p-10 rounded-lg shadow-lg text-white">
-      <form (ngSubmit)="onSubmit()">
+      <form (ngSubmit)="onSubmit()" #contact_form>
         <!-- Service Dropdown -->
-        <div class="form-group mb-4 sm:mb-6">
-          <label for="service" class="block text-lg sm:text-xl lg:text-2xl font-light mb-2">How can We Help?</label>
-          <div class="service-dropdown relative bg-purple-900 rounded-lg" style="width: 100%; max-width: 400px;">
+        <div class="form-group mb-6">
+          <label for="service" class="block text-xl md:text-2xl font-light mb-2">How can We Help?</label>
+          <div class="service-dropdown relative rounded-lg" 
+              style="background-color:#30057e; width: 50%; max-width: 100%; height: 60px;">
             <select
               id="service"
               name="service"
-              class="w-full h-10 sm:h-[50px] bg-transparent border-none text-white text-base sm:text-lg px-4 pr-10 outline-none appearance-none"
+              class="w-full h-full bg-transparent border-none text-white px-4 md:px-8 outline-none appearance-none text-base md:text-lg lg:text-xl"
               [(ngModel)]="selectedService"
-              (focus)="isDropdownOpen = true"
-              (blur)="isDropdownOpen = false"
               (change)="addService()">
-              <option class="text-gray-500" value="" disabled selected>Select Service</option>
-              <option class="text-gray-500" value="Social Media Marketing">Social Media Marketing</option>
-              <option class="text-gray-500" value="Google Ads">Google Ads</option>
-              <option class="text-gray-500" value="Content Writing">Content Writing</option>
-              <option class="text-gray-500" value="Web Design & Development">Web Design & Development</option>
+              <option class="text-gray-800 bg-white" value="" disabled selected>Select Service</option>
+              <option class="text-gray-800 bg-white" value="Social Media Marketing">Social Media Marketing</option>
+              <option class="text-gray-800 bg-white" value="Google Ads">Google Ads</option>
+              <option class="text-gray-800 bg-white" value="Content Writing">Content Writing</option>
+              <option class="text-gray-800 bg-white" value="Web Design & Development">Web Design & Development</option>
             </select>
-          
             <!-- Chevron Icon -->
-            <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 transform -translate-y-1/2 transition-transform duration-300"
-               [ngClass]="{'rotate-180': isDropdownOpen}">
-            </i>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4">
+              <svg class="h-4 w-4 md:h-5 md:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </div>
           </div>
         </div>
 
         <!-- Selected Services -->
-        <div class="selected-services flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6">
+        <div class="selected-services flex flex-wrap gap-2 md:gap-3 mb-6">
           <span
             *ngFor="let service of selectedServices"
-            class="bg-purple-900 text-white text-xs sm:text-sm px-2 sm:px-3 py-1 rounded-full shadow-md flex items-center gap-1 sm:gap-2">
+            class="bg-purple-900 text-white text-xs md:text-sm px-2 md:px-3 py-1 rounded-full shadow-md flex items-center gap-1 md:gap-2">
             {{ service }}
             <button
               type="button"
@@ -137,47 +156,45 @@
         </div>
 
         <!-- Name and Email -->
-        <div class="form-group flex flex-col lg:flex-row gap-4 sm:gap-5 mb-4 sm:mb-6">
-          <div class="input-wrapper flex-1">
-            <label for="name" class="block text-base sm:text-lg lg:text-2xl font-light mb-2">Full Name</label>
+        <div class="form-group flex flex-col md:flex-row gap-4 md:gap-5 mb-6">
+          <div class="input-wrapper w-full md:w-1/2">
+            <label for="name" class="block text-lg md:text-xl lg:text-2xl font-light mb-2">Full Name</label>
             <input
               type="text"
               id="name"
-              autocomplete="off"
-              [(ngModel)]="formData.name"
               name="name"
               placeholder="Enter your full name"
-              class="w-full border border-gray-300 rounded-lg px-3 sm:px-4 py-2 text-black text-sm sm:text-base focus:ring-2 focus:ring-purple-500 bg-white">
+              [(ngModel)]="formData.name"
+              class="w-full h-12 md:h-14 lg:h-16 border border-gray-300 rounded-lg px-4 py-2 text-black focus:ring-2 focus:ring-purple-500 bg-white text-base md:text-lg">
           </div>
-          <div class="input-wrapper flex-1">
-            <label for="email" class="block text-base sm:text-lg lg:text-2xl font-light mb-2">Enter Email</label>
+          <div class="input-wrapper w-full md:w-1/2">
+            <label for="email" class="block text-lg md:text-xl lg:text-2xl font-light mb-2">Enter Email</label>
             <input
               type="email"
               id="email"
-              autocomplete="off"
               name="email"
-              [(ngModel)]="formData.email"
               placeholder="Enter your email"
-              class="w-full border border-gray-300 rounded-lg px-3 sm:px-4 py-2 text-black text-sm sm:text-base focus:ring-2 focus:ring-purple-500 bg-white">
+              [(ngModel)]="formData.email"
+              class="w-full h-12 md:h-14 lg:h-16 border border-gray-300 rounded-lg px-4 py-2 text-black focus:ring-2 focus:ring-purple-500 bg-white text-base md:text-lg">
           </div>
         </div>
 
         <!-- Message -->
-        <div class="form-group mb-4 sm:mb-6">
-          <label for="message" class="block text-base sm:text-lg lg:text-2xl font-light mb-2">Message</label>
+        <div class="form-group mb-6">
+          <label for="message" class="block text-lg md:text-xl lg:text-2xl font-light mb-2">Message</label>
           <textarea
             id="message"
             name="message"
+            placeholder="What else can you share about the project?"
             [(ngModel)]="formData.message"
-            placeholder="What else can you share about the project"
-            class="w-full h-32 sm:h-40 border border-gray-300 rounded-lg px-3 sm:px-4 py-2 text-black text-sm sm:text-base focus:ring-2 focus:ring-purple-500 resize-y bg-white"></textarea>
+            class="w-full h-32 md:h-40 lg:h-48 border border-gray-300 rounded-lg px-4 py-2 text-black focus:ring-2 focus:ring-purple-500 resize-y bg-white text-base md:text-lg"></textarea>
         </div>
 
         <!-- Submit Button -->
-        <div class="submit-btn flex justify-center lg:justify-end">
+        <div class="submit-btn flex justify-center md:justify-end mt-6">
           <button
             type="submit"
-            class="w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-3 lg:w-[250px] lg:h-14 bg-transparent border border-white rounded-full text-white text-base sm:text-lg lg:text-xl font-medium hover:bg-purple-700 hover:text-black transition cursor-pointer">
+            class="w-full md:w-auto px-6 md:px-8 h-12 md:h-14 bg-transparent border border-white rounded-full text-white text-base md:text-lg lg:text-xl font-medium hover:bg-purple-700 hover:text-black transition hover:cursor-pointer">
             Submit
           </button>
         </div>
