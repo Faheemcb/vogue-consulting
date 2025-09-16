@@ -11,7 +11,7 @@ import { ContactFormService } from '../../services/contact-form.service';
         <!-- Logo -->
         <a routerLink="/" class="flex items-center">
           <img
-            src="../../../assets/img/vgc-white.svg"
+            src="../../../assets/img/final.png"
             class="h-12 sm:h-14 w-auto"
             alt="Flowbite Logo"
           />

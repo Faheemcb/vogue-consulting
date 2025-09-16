@@ -9,6 +9,38 @@ html, body {
    -ms-overflow-style: none; /* IE 10+ */
 }
 
+@layer base {
+  html {
+    @apply font-['helvetica'];
+    font-weight: 400; /* Ensure normal weight by default */
+  }
+  
+  /* Alternative: Use a font stack with better fallbacks */
+  html {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+  }
+  
+  /* Or specify multiple weights if you have them loaded */
+  @font-face {
+    font-family: 'helvetica';
+    src: local('Helvetica');
+    font-weight: 300;
+  }
+  
+  @font-face {
+    font-family: 'helvetica';
+    src: local('Helvetica');
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'helvetica';
+    src: local('Helvetica');
+    font-weight: 700;
+  }
+}
+
 .banner {
   @apply flex justify-center items-center text-center mt-[50px]; /* Adjusted spacing */
 }

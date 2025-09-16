@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   <div class="container max-w-7xl mx-auto"> 
     <div class="h-[1px] sm:h-[2px] md:h-[3px] lg:h-[4px] bg-white opacity-20 my-6 sm:my-8 md:my-10 lg:my-12 w-full"></div>
     <footer class="py-2 sm:py-3 md:py-4">
-      <p class="text-white text-center text-xs sm:text-sm md:text-base lg:text-lg font-sans">
+      <p class="text-white text-center text-xs sm:text-sm md:text-base lg:text-lg">
         © 2025 Vogue Consulting. All Rights Reserved.
       </p>
     </footer>
